@@ -1,0 +1,33 @@
+.container1 {
+  padding: var(--spacing-m);
+  background-color: var(--surface-secondry);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: none;
+}
+
+.container2 {
+  display: flex;
+  gap: var(--spacing-m);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconButton {
+  display: block;
+}
+
+@media screen and (min-width: 990px) {
+  .links {
+    display: flex;
+    gap: var(--spacing-m);
+  }
+
+  .iconButton {
+    display: none;
+  }
+}
