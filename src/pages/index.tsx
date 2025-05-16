@@ -1,18 +1,36 @@
-import Head from "next/head";
+import Footer from "@/ui/layouts/Footer";
+import TopNavBar from "@/ui/layouts/TopNavBar";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-// import styles from "@/styles/Home.module.css";
+import heroSectionImage from "../../public/pictures/heroImage.png";
+import styles from "./Index.module.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const HeroSection = () => {
+  return (
+    <div className={styles.herosectionContainer}>
+      <div
+        style={{
+          maxWidth: "1024px",
+          margin: "auto",
+        }}
+      >
+        <Image
+          src={heroSectionImage}
+          alt="hero section"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+      <p className="h1">We make web app empower business with technology</p>
+    </div>
+  );
+};
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <TopNavBar />
+      <HeroSection />
+      <Footer />
+    </>
+  );
 }
