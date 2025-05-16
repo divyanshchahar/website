@@ -1,0 +1,8 @@
+.button {
+  padding: var(--spacing-s);
+}
+
+.img {
+  height: var(--icon-height);
+  width: auto;
+}
