@@ -27,3 +27,57 @@
     top: 50%;
   }
 }
+
+/* ############# */
+/* # TECH CARD # */
+/* ############# */
+
+.techCardContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+  margin: var(--spacing-m);
+  max-width: 350px;
+  border-radius: var(--radius-s);
+}
+
+.techCardImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-m);
+  justify-content: space-between;
+}
+
+.techCardIcon {
+  height: var(--icon-height);
+  width: auto;
+  margin: var(--spacing-s);
+}
+
+.techCardCtaButton {
+  width: 100%;
+  margin-top: var(--spacing-m);
+}
+
+/* ################### */
+/* # SERVICE SECTION # */
+/* ################### */
+
+.serviceSectionContainer {
+  background-color: var(--surface-primary-2);
+  padding: var(--spacing-m);
+}
+
+.serviceSectionCardContainer {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  max-width: 1024px;
+}
+
+@media screen and (min-width: 927px) {
+  .serviceSectionCardContainer {
+    justify-content: start;
+  }
+}
