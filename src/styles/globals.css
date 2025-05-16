@@ -57,13 +57,7 @@ a {
   --surface-primary-1: #1a1a1a;
   --surface-primary-2: #333;
   --surface-secondry: #000;
-  --surfaace-cta: #ddb344;
-
-  --typography-primary: #fff;
-  --typography-scondry: #b2b2b2;
-  --typography-cta: #fff;
-  --typography-warning: #ff0000;
-  --typography-correct: #00ff00;
+  --surface-cta: #ddb344;
 
   /* ########### */
   /* # SPACING # */
@@ -76,6 +70,23 @@ a {
   /* ############## */
   /* # TYPOGRAPHY # */
   /* ############## */
+
+  --typography-primary: #fff;
+  --typography-scondry: #b2b2b2;
+  --typography-cta: #fff;
+  --typography-warning: #ff0000;
+  --typography-correct: #00ff00;
+
+  /* ######### */
+  /* # ICONS # */
+  /* ######### */
+  --icon-height: 64px;
+
+  /* ##########  */
+  /* # BORDER # */
+  /* #########  */
+  --radius-s: 5px;
+  --radius-m: 10px;
 }
 
 @media screen and (min-width: 480px) {
@@ -105,6 +116,16 @@ a {
 body {
   font-size: 1rem;
   color: var(--typography-primary);
+}
+
+button {
+  border: none;
+  background: transparent;
+  color: var(--typography-primary);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .h1 {
