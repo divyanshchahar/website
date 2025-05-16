@@ -1,0 +1,29 @@
+/* ################ */
+/* # HERO SECTION # */
+/* ################ */
+
+.herosectionContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-l);
+  position: relative;
+  min-height: 300px;
+}
+
+.heroSectionImageContainer {
+  margin: auto;
+  max-width: 1024px;
+}
+
+.herosectionContainer p {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  text-align: center;
+  translate: -50% -50%;
+}
+
+@media screen and (min-width: 551px) {
+  .herosectionContainer p {
+    top: 50%;
+  }
+}
