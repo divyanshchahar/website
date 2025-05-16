@@ -1,0 +1,5 @@
+.button {
+  padding: var(--spacing-s);
+  background-color: var(--surface-cta);
+  border-radius: var(--radius-m);
+}
