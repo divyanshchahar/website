@@ -52,7 +52,7 @@ const TechCard = ({
     <div className={styles.techCardContainer}>
       <p className="h4">{titleText}</p>
 
-      <p>{descriptionText}</p>
+      {descriptionText}
 
       <div className={styles.techCardImageContainer}>
         {imageArrary.map((item) => {
@@ -76,7 +76,7 @@ const TechCard = ({
   );
 };
 
-const ServiceSection = ({ techCards }: ServiceSectionProps) => {
+const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
   return (
     <div className={styles.serviceSectionContainer}>
       <h1 className="h1">Our Services</h1>
@@ -96,11 +96,18 @@ const ServiceSection = ({ techCards }: ServiceSectionProps) => {
   );
 };
 
-const techCards = [
+const techCards: ServiceSectionProps = [
   {
     titleText: "Frontend Solution",
-    descriptionText:
-      "At Leondevs we believe in making frontend/client apps with focus on functionality, simplicity and consistent styling. JavaScript is our language of choice for all frontend/client applications. Depending on the requirements the frontend/client application will be built with either React.js or with Next.js. ",
+    descriptionText: (
+      <p>
+        At Leondevs we believe in making frontend/client apps with focus on
+        functionality, simplicity and consistent styling. JavaScript is our
+        language of choice for all frontend/client applications. Depending on
+        the requirements the frontend/client application will be built with
+        either React.js or with Next.js.
+      </p>
+    ),
     imageArrary: [
       { techImage: iconReact, techName: "React" },
       { techImage: iconNext, techName: "React" },
@@ -108,8 +115,14 @@ const techCards = [
   },
   {
     titleText: "Backend Solution",
-    descriptionText:
-      "At leondevs we offer complete Backend/Server side solutions for our clients ranging from simple API servers to implementation of complex business logic.  Our language of choice is JavaScript which makes node.js our defacto runtime. We build our backends in express.js.",
+    descriptionText: (
+      <p>
+        At leondevs we offer complete Backend/Server side solutions for our
+        clients ranging from simple API servers to implementation of complex
+        business logic. Our language of choice is JavaScript which makes node.js
+        our defacto runtime. We build our backends in express.js.
+      </p>
+    ),
     imageArrary: [
       { techImage: iconNode, techName: "node js" },
       { techImage: iconExpress, techName: "express js" },
@@ -119,8 +132,14 @@ const techCards = [
   },
   {
     titleText: "Ecommerce Solution",
-    descriptionText:
-      "At leondevs we offer complete Backend/Server side solutions for our clients ranging from simple API servers to implementation of complex business logic.  Our language of choice is JavaScript which makes node.js our defacto runtime. We build our backends in express.js.   ",
+    descriptionText: (
+      <p>
+        At leondevs we offer complete Backend/Server side solutions for our
+        clients ranging from simple API servers to implementation of complex
+        business logic. Our language of choice is JavaScript which makes node.js
+        our defacto runtime. We build our backends in express.js.
+      </p>
+    ),
     imageArrary: [
       { techImage: iconNode, techName: "node js" },
       { techImage: iconExpress, techName: "express js" },
