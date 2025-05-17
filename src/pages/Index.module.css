@@ -76,7 +76,7 @@
   max-width: 1024px;
 }
 
-@media screen and (min-width: 927px) {
+@media screen and (min-width: 900px) {
   .serviceSectionCardContainer {
     justify-content: start;
   }
