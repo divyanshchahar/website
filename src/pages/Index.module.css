@@ -81,3 +81,35 @@
     justify-content: start;
   }
 }
+
+/* ################# */
+/* # WHY CHOOSE US # */
+/* ################# */
+
+.whatWeOfferContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+}
+
+.whatWeOfferMediaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--surface-primary-1);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-m);
+  max-width: 1024px;
+  margin: auto;
+  margin-top: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+.higlightedText {
+  color: var(--typography-branding);
+  font-weight: 750;
+}
+
+.whatWeOfferInnerContainer {
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
