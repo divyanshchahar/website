@@ -10,6 +10,8 @@ import iconReact from "./../../public/icons/icon_react.svg";
 import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNode from ".././../public/icons/icon_node.svg";
 import CTAButton from "@/ui/components/CTAButton";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
+import iconPeace from "../../public/icons/icon_peace.svg";
 
 const HeroSection = () => {
   return (
@@ -42,6 +44,51 @@ interface TechCardProps {
 }
 
 type ServiceSectionProps = TechCardProps[];
+
+const accordianProps = [
+  {
+    triggerText: "Quality",
+    itemValue: "Quality",
+    contentBody: (
+      <div>
+        Over the years we have learnt a lot form our mistakes and have set up
+        very{" "}
+        <span className={styles.higlightedText}>
+          rigorous and elaborate standard operating procedures
+        </span>{" "}
+        to ensure the{" "}
+        <span className={styles.higlightedText}>
+          highest standards of quality
+        </span>
+      </div>
+    ),
+  },
+  {
+    triggerText: "Commitment",
+    itemValue: "Commitment",
+    contentBody: (
+      <div>
+        At Leondevs{" "}
+        <span className={styles.higlightedText}>
+          a promise made is a promise kept
+        </span>
+        . We deliver on all the points mentioned in the agreement.
+      </div>
+    ),
+  },
+  {
+    triggerText: "Transparency",
+    itemValue: "Transparency",
+    contentBody: (
+      <div>
+        We operate with{" "}
+        <span className={styles.higlightedText}>100% transparency</span>. To
+        avoid any confusions we make an agreement listing all the requirements
+        and the expected time line of delivery
+      </div>
+    ),
+  },
+];
 
 const TechCard = ({
   titleText,
@@ -91,6 +138,29 @@ const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
             />
           );
         })}
+      </div>
+    </div>
+  );
+};
+
+const WhatWeOffer = () => {
+  return (
+    <div className={styles.whatWeOfferContainer}>
+      <h1 className="h3">What we Offer</h1>
+
+      <div className={styles.whatWeOfferMediaContainer}>
+        <div>
+          <div className={styles.whatWeOfferInnerContainer}>
+            <Image
+              src={iconPeace}
+              alt="api"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <h2 className={`h5 ${styles.higlightedText}`}>Peace of Mind</h2>
+          </div>
+        </div>
+
+        <AccordionPrimitive items={accordianProps} />
       </div>
     </div>
   );
@@ -156,6 +226,7 @@ export default function Home() {
       <TopNavBar />
       <HeroSection />
       <ServiceSection techCards={techCards} />
+      <WhatWeOffer />
       <Footer />
     </>
   );
