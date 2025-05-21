@@ -1,0 +1,35 @@
+/* ############## */
+/* # REASONCARD # */
+/* ############## */
+
+.reasonContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--surface-cta);
+  max-width: 325px;
+}
+
+.reasonHeading {
+  color: var(--typography-branding);
+  text-align: center;
+  margin: var(--spacing-m);
+}
+
+/* ############# */
+/* # OURVALUES # */
+/* ############# */
+
+.valuesContainer {
+  padding: var(--spacing-m);
+  background-color: var(--surface-primary-2);
+}
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  max-width: 1024px;
+  margin-top: var(--spacing-m);
+  margin: auto;
+}
