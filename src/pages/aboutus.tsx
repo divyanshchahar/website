@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "./aboutus.module.css";
 import iconTransparency from "../../public/icons/icon_agreement.svg";
 import iconCommitment from "../../public/icons/icon_commitment.svg";
@@ -6,10 +6,28 @@ import iconDelight from "../../public/icons/icon_satisfaction.svg";
 import iconQuality from "../../public/icons/icon_quality.svg";
 import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
 import CTAButton from "@/ui/components/CTAButton";
-import iconApi from "../../public/icons/icon_api.svg";
 import iconMeeting from "../../public/icons/icon_meeting.svg";
+import { ReactElement } from "react";
 
-const ReasonCard = ({ reasonImage, reasonHeading, reasonBody }) => {
+export interface ReasonCardProps {
+  reasonImage: StaticImageData;
+  reasonHeading: string;
+  reasonBody: ReactElement;
+}
+
+export interface OurValuesProps {
+  reasons: {
+    reasonImage: StaticImageData;
+    reasonHeading: string;
+    reasonBody: ReactElement;
+  }[];
+}
+
+const ReasonCard = ({
+  reasonImage,
+  reasonHeading,
+  reasonBody,
+}: ReasonCardProps) => {
   return (
     <div className={styles.reasonContainer}>
       <div style={{ width: "100%" }}>
@@ -27,7 +45,7 @@ const ReasonCard = ({ reasonImage, reasonHeading, reasonBody }) => {
   );
 };
 
-const OurValues = ({ reasons }) => {
+const OurValues = ({ reasons }: OurValuesProps) => {
   return (
     <div className={styles.valuesContainer}>
       <h1 className="h4">Our Values</h1>
