@@ -16,6 +16,11 @@
   margin: var(--spacing-m);
 }
 
+.highlightedText {
+  color: var(--typography-branding);
+  font-weight: 750;
+}
+
 /* ############# */
 /* # OURVALUES # */
 /* ############# */

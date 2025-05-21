@@ -49,9 +49,10 @@ const reasons = [
     reasonHeading: "Transparency",
     reasonBody: (
       <p>
-        We operate with 100% transparency. To avoid any confusions we make an
-        agreement listing all the requirements and the expected time line of
-        delivery
+        We operate with{" "}
+        <span className={styles.highlightedText}>100% transparency</span>. To
+        avoid any confusions we make an agreement listing all the requirements
+        and the expected time line of delivery
       </p>
     ),
   },
@@ -60,8 +61,11 @@ const reasons = [
     reasonHeading: "Commitment",
     reasonBody: (
       <p>
-        At Leondevs a promise made is a promise kept. We deliver on all the
-        points mentioned in the agreement.
+        At Leondevs{" "}
+        <span className={styles.highlightedText}>
+          a promise made is a promise kept
+        </span>
+        . We deliver on all the points mentioned in the agreement.
       </p>
     ),
   },
@@ -70,8 +74,9 @@ const reasons = [
     reasonHeading: "Customer Delight",
     reasonBody: (
       <p>
-        Customer is king, in matters of choice. A motto we live by, we strive to
-        deliver the best customer experiance humanly possible
+        <span className={styles.highlightedText}>Customer is king</span>, in
+        matters of choice. A motto we live by, we strive to deliver the best
+        customer experiance humanly possible
       </p>
     ),
   },
@@ -81,8 +86,14 @@ const reasons = [
     reasonBody: (
       <p>
         Over the years we have learnt a lot form our mistakes and have set up
-        very rigorous and elaborate standard operating procedures to ensure the
-        highest standards of quality
+        very{" "}
+        <span className={styles.highlightedText}>
+          rigorous and elaborate standard operating procedures
+        </span>{" "}
+        to ensure the{" "}
+        <span className={styles.highlightedText}>
+          highest standards of quality
+        </span>
       </p>
     ),
   },
