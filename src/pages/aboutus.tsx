@@ -4,6 +4,10 @@ import iconTransparency from "../../public/icons/icon_agreement.svg";
 import iconCommitment from "../../public/icons/icon_commitment.svg";
 import iconDelight from "../../public/icons/icon_satisfaction.svg";
 import iconQuality from "../../public/icons/icon_quality.svg";
+import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
+import CTAButton from "@/ui/components/CTAButton";
+import iconApi from "../../public/icons/icon_api.svg";
+import iconMeeting from "../../public/icons/icon_meeting.svg";
 
 const ReasonCard = ({ reasonImage, reasonHeading, reasonBody }) => {
   return (
@@ -38,6 +42,60 @@ const OurValues = ({ reasons }) => {
             />
           );
         })}
+      </div>
+    </div>
+  );
+};
+
+const DirectorsInfo = () => {
+  return (
+    <div className={styles.directorInfoContainer}>
+      <h1 className="h4">
+        Meet our <span className={styles.strikeThroughText}>Director</span>{" "}
+        <span className={styles.highlightedText}>Rocket Scientist</span>
+      </h1>
+
+      <div className={styles.flexContainer}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={directorPhoto}
+            alt="director's photo"
+            className={styles.directorsImage}
+          />
+        </div>
+
+        <div className={styles.textContainer}>
+          <p className="h5">Why I write Code</p>
+
+          <br />
+
+          <p>
+            I am a creative person, not the kind of person who would create the
+            next Mona Lisa, I create solutions with technology. Writing code is
+            a creative outlet for me. I enjoy creating new things.
+          </p>
+
+          <br />
+
+          <p className="h5">What are my qualifications</p>
+
+          <br />
+
+          <p>
+            I hold a bachelors and masters in Aerospace Engineering. I was
+            working on rockets, planes and formulae one cars. I am pretty sure I
+            will be able to write code as well.
+          </p>
+
+          <br />
+
+          <CTAButton
+            buttonText="Book a meeting"
+            buttonIcon={iconMeeting}
+            buttonIconName="calendar"
+            addedStyle={styles.ctaButton}
+          />
+        </div>
       </div>
     </div>
   );
@@ -103,6 +161,7 @@ function AboutUs() {
   return (
     <>
       <OurValues reasons={reasons} />
+      <DirectorsInfo />
     </>
   );
 }
