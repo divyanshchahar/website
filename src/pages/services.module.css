@@ -40,18 +40,13 @@
 
 .innerContainer {
   max-width: 1024px;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* gap: var(--spacing-m); */
   margin: auto;
 }
 
 .mediaContainer {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   gap: var(--spacing-m);
-  /* padding-top: var(--spacing-m); */
   justify-content: center;
 }
 
@@ -59,7 +54,6 @@
   width: 100%;
   height: auto;
   max-width: 500px;
-  /* background-color: brown; */
 }
 
 .textContainer {
