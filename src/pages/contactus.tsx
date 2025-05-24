@@ -2,6 +2,8 @@ import Button from "@/ui/components/Button";
 import styles from "./contactus.module.css";
 import CTAButton from "@/ui/components/CTAButton";
 import iconSchedule from "./../../public/icons/icon_meeting.svg";
+import externalLinks from "@/consts/externalLinks";
+import NavLink from "@/ui/components/NavLink";
 
 const DetailsOrSchedule = () => {
   return (
@@ -11,11 +13,18 @@ const DetailsOrSchedule = () => {
       <br />
 
       <hr />
-      <CTAButton
-        buttonText="Book a Meeting"
-        buttonIcon={iconSchedule}
-        buttonIconName="Calendar"
-      />
+
+      <a
+        href={externalLinks.bookingUrl}
+        target="blank"
+        className="pointerOnHover"
+      >
+        <CTAButton
+          buttonText="Book a Meeting"
+          buttonIcon={iconSchedule}
+          buttonIconName="Calendar"
+        />
+      </a>
       <br />
       <hr />
 
