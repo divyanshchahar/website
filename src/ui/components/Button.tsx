@@ -2,7 +2,7 @@ import styles from "./Button.module.css";
 
 export interface ButtonProps {
   buttonText: string;
-  addedStyles: string;
+  addedStyles?: string;
 }
 
 function Button({ buttonText, addedStyles }: ButtonProps) {
