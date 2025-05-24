@@ -3,6 +3,14 @@
   padding: var(--spacing-m);
   height: 100vh;
   margin-top: var(--spacing-top-offset);
+}
+
+.formContainer {
+  border: 1px solid white;
+  border-radius: var(--radius-m);
+  padding: var(--spacing-m);
+  max-width: 500px;
+  margin: auto;
 
   & input,
   textarea {
@@ -14,14 +22,6 @@
     border-radius: var(--radius-s);
     width: 100%;
     border: none;
-  }
-
-  & form {
-    border: 1px solid white;
-    border-radius: var(--radius-m);
-    padding: var(--spacing-m);
-    max-width: 500px;
-    margin: auto;
   }
 
   & button {
