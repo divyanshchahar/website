@@ -1,5 +1,3 @@
-import Footer from "@/ui/layouts/Footer";
-import TopNavBar from "@/ui/layouts/TopNavBar";
 import Image, { StaticImageData } from "next/image";
 import heroSectionImage from "../../public/pictures/heroImage.png";
 import styles from "./Index.module.css";
@@ -223,11 +221,9 @@ const techCards: ServiceSectionProps = [
 export default function Home() {
   return (
     <>
-      <TopNavBar />
       <HeroSection />
       <ServiceSection techCards={techCards} />
       <WhatWeOffer />
-      <Footer />
     </>
   );
 }
