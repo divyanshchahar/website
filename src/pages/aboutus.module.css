@@ -28,6 +28,7 @@
 .valuesContainer {
   padding: var(--spacing-m);
   background-color: var(--surface-primary-2);
+  margin-top: var(--spacing-top-offset);
 }
 
 .reasons {
