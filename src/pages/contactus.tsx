@@ -3,21 +3,19 @@ import styles from "./contactus.module.css";
 import CTAButton from "@/ui/components/CTAButton";
 import iconSchedule from "./../../public/icons/icon_meeting.svg";
 import externalLinks from "@/consts/externalLinks";
-import NavLink from "@/ui/components/NavLink";
 
 const DetailsOrSchedule = () => {
   return (
-    <form>
+    <div className={styles.formContainer}>
       <p>Book a meeting or fill out the form below and we will get in touch</p>
 
       <br />
 
       <hr />
-
       <a
         href={externalLinks.bookingUrl}
         target="blank"
-        className="pointerOnHover"
+        className="pointOnHover"
       >
         <CTAButton
           buttonText="Book a Meeting"
@@ -25,38 +23,46 @@ const DetailsOrSchedule = () => {
           buttonIconName="Calendar"
         />
       </a>
-      <br />
-      <hr />
 
-      <br />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
+        <br />
 
-      <label>Name</label>
-      <br />
-      <input type="text" placeholder="John Doe" />
+        <hr />
 
-      <br />
-      <br />
+        <br />
 
-      <label>email</label>
-      <br />
-      <input type="text" placeholder="email@website.com" />
+        <label>Name</label>
+        <br />
+        <input type="text" placeholder="John Doe" />
 
-      <br />
-      <br />
+        <br />
+        <br />
 
-      <label>contact number</label>
-      <br />
-      <input type="text" placeholder="+91-0123456789" />
+        <label>email</label>
+        <br />
+        <input type="text" placeholder="email@website.com" />
 
-      <br />
-      <br />
+        <br />
+        <br />
 
-      <label>Tell us about your project</label>
-      <br />
-      <textarea placeholder="Describe your project" />
+        <label>contact number</label>
+        <br />
+        <input type="text" placeholder="+91-0123456789" />
 
-      <Button buttonText="Send Enquire" />
-    </form>
+        <br />
+        <br />
+
+        <label>Tell us about your project</label>
+        <br />
+        <textarea placeholder="Describe your project" />
+
+        <Button buttonText="Send Enquire" />
+      </form>
+    </div>
   );
 };
 
