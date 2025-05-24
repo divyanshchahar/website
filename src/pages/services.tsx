@@ -7,7 +7,6 @@ import iconApi from "../../public/icons/icon_api.svg";
 import iconNext from "../../public/icons/icon_nextjs.svg";
 import Image from "next/image";
 import styles from "./services.module.css";
-import TopNavBar from "@/ui/layouts/TopNavBar";
 import uiInfographic from "../../public/infographics/infographic_ui.svg";
 import frontendInfographic from "../../public/infographics/infographic_frontend.svg";
 import CTAButton from "@/ui/components/CTAButton";
@@ -217,9 +216,7 @@ const OurServices = () => {
 function Services() {
   return (
     <div>
-      <TopNavBar />
       <HeroSection />
-      {/* <FrontEnd /> */}
       <OurServices />
     </div>
   );
