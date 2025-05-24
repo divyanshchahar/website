@@ -27,7 +27,10 @@ const HeroSection = () => {
         />
       </div>
 
-      <p className="h1">We make web app empower business with technology</p>
+      <p className="h1">
+        We <span className={styles.strikeThrough}>make web apps</span> empower
+        business with technology
+      </p>
     </div>
   );
 };
