@@ -7,6 +7,7 @@
   padding: var(--spacing-l);
   position: relative;
   min-height: 300px;
+  margin-top: var(--spacing-top-offset);
 }
 
 .heroSectionImageContainer {
