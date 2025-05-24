@@ -2,6 +2,7 @@
   background-color: var(--surface-primary-2);
   padding: var(--spacing-m);
   height: 100vh;
+  margin-top: var(--spacing-top-offset);
 
   & input,
   textarea {
