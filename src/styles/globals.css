@@ -23,6 +23,7 @@
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;
+  --spacing-top-offset: 84px;
 
   /* ############## */
   /* # TYPOGRAPHY # */
@@ -48,7 +49,7 @@
 }
 
 @media screen and (min-width: 480px) {
-  :root {
+  * {
     /* ########### */
     /* # SPACING # */
     /* ########### */
@@ -56,11 +57,12 @@
     --spacing-s: 12px;
     --spacing-m: 20px;
     --spacing-l: 28px;
+    --spacing-top-offset: 99px;
   }
 }
 
 @media screen and (min-width: 990px) {
-  :root {
+  * {
     /* ########### */
     /* # SPACING # */
     /* ########### */
@@ -68,6 +70,7 @@
     --spacing-s: 16px;
     --spacing-m: 24px;
     --spacing-l: 32px;
+    --spacing-top-offset: 95px;
   }
 }
 
