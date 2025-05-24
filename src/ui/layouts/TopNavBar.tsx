@@ -34,7 +34,7 @@ function TopNavBar() {
           <NavLink linkAddress="" linkText="Portfolio" />
         </div>
 
-        <a href={externalLinks.bookingUrl} target="blank">
+        <a href={internalLinks.contactus} target="blank">
           <CTAButton buttonText="Get a Quote" />
         </a>
       </div>
