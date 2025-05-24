@@ -125,3 +125,7 @@ a {
   font-size: 1rem;
   font-weight: 750;
 }
+
+.pointerOnHover:hover {
+  cursor: pointer;
+}
