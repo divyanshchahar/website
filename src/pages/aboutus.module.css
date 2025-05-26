@@ -62,8 +62,7 @@
   gap: var(--spacing-m);
   flex-wrap: wrap;
   margin: auto;
-  max-width: 800px;
-
+  max-width: 1024px;
   justify-content: center;
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
