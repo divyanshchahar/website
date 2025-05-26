@@ -62,10 +62,6 @@ const ExternalLinkContainer = ({ groupName, links }: LinkContainerPorps) => {
         {links.map((link) => {
           return (
             <>
-              {/* <NavLink
-                linkText={link.linkText}
-                linkAddress={link.linkAddress}
-              /> */}
               <a href={link.linkAddress} target="_blank">
                 {link.linkText}
               </a>
