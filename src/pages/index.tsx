@@ -10,6 +10,7 @@ import iconNode from ".././../public/icons/icon_node.svg";
 import CTAButton from "@/ui/components/CTAButton";
 import AccordionPrimitive from "@/ui/primitives/Accordian";
 import iconPeace from "../../public/icons/icon_peace.svg";
+import internalLinks from "@/consts/internalLinks";
 
 const HeroSection = () => {
   return (
@@ -116,10 +117,12 @@ const TechCard = ({
         })}
       </div>
 
-      <CTAButton
-        buttonText="Get a Quote"
-        addedStyle={styles.techCardCtaButton}
-      />
+      <a href={internalLinks.contactus} className="pointerOnHover">
+        <CTAButton
+          buttonText="Get a Quote"
+          addedStyle={styles.techCardCtaButton}
+        />
+      </a>
     </div>
   );
 };
