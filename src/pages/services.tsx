@@ -10,6 +10,7 @@ import styles from "./services.module.css";
 import uiInfographic from "../../public/infographics/infographic_ui.svg";
 import frontendInfographic from "../../public/infographics/infographic_frontend.svg";
 import CTAButton from "@/ui/components/CTAButton";
+import internalLinks from "@/consts/internalLinks";
 
 const HeroSection = () => {
   return (
@@ -163,7 +164,10 @@ const FrontEnd = () => {
           </div>
         </div>
       </div>
-      <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+
+      <a href={internalLinks.contactus} className="pinterOnHover">
+        <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+      </a>
     </div>
   );
 };
@@ -180,7 +184,9 @@ const BackEnd = () => {
         applications made by use are made using node.js and express.js
       </p>
 
-      <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+      <a href={internalLinks.contactus} className="pinterOnHover">
+        <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+      </a>
     </div>
   );
 };
@@ -197,7 +203,9 @@ const Ecommerce = () => {
         and fulfilment services.
       </p>
 
-      <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+      <a href={internalLinks.contactus} className="pinterOnHover">
+        <CTAButton buttonText="Get a Quote" addedStyle={styles.ctaButton} />
+      </a>
     </div>
   );
 };
