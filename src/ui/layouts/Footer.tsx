@@ -38,7 +38,7 @@ export type LinkContainerPorps = {
   }[];
 };
 
-const LinkContainer = ({ groupName, links }: LinkContainerPorps) => {
+const InternalLinkContainer = ({ groupName, links }: LinkContainerPorps) => {
   return (
     <div>
       <h4 className="h6">{groupName}</h4>
@@ -51,6 +51,30 @@ const LinkContainer = ({ groupName, links }: LinkContainerPorps) => {
         );
       })}
     </div>
+  );
+};
+
+const ExternalLinkContainer = ({ groupName, links }: LinkContainerPorps) => {
+  return (
+    <>
+      <div>
+        <h4 className="h6">{groupName}</h4>
+        {links.map((link) => {
+          return (
+            <>
+              {/* <NavLink
+                linkText={link.linkText}
+                linkAddress={link.linkAddress}
+              /> */}
+              <a href={link.linkAddress} target="_blank">
+                {link.linkText}
+              </a>
+              <br />
+            </>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
@@ -74,12 +98,12 @@ function Footer() {
   return (
     <footer>
       <div className={styles.container}>
-        <LinkContainer
+        <InternalLinkContainer
           groupName={linksGroup1.groupName}
           links={linksGroup1.links}
         />
 
-        <LinkContainer
+        <ExternalLinkContainer
           groupName={linksGroup2.groupName}
           links={linksGroup2.links}
         />
