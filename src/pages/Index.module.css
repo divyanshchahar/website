@@ -8,6 +8,7 @@
   position: relative;
   min-height: 300px;
   margin-top: var(--spacing-top-offset);
+  z-index: -1;
 }
 
 .heroSectionImageContainer {
@@ -43,6 +44,10 @@
   margin: var(--spacing-m);
   max-width: 350px;
   border-radius: var(--radius-s);
+}
+
+.techCardContainer p {
+  margin-top: var(--spacing-m);
 }
 
 .techCardImageContainer {
