@@ -23,6 +23,8 @@
 
 .iconButton {
   display: block;
+  height: var(--icon-height);
+  width: auto;
 }
 
 @media screen and (min-width: 990px) {
@@ -34,4 +36,24 @@
   .iconButton {
     display: none;
   }
+}
+
+/* ################ */
+/* # DROPDOWNMENU # */
+/* ################ */
+
+.dropDownMenuContent {
+  width: 100vw;
+  border: 1px solid white;
+  border-radius: var(--radius-s);
+  padding: var(--spacing-m);
+  background-color: var(--surface-secondry);
+  margin-top: 20px;
+}
+
+.seprator {
+  height: 1px;
+  background-color: white;
+  margin-top: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
 }
