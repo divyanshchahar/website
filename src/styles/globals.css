@@ -23,7 +23,7 @@
   --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;
-  --spacing-top-offset: 83px;
+  --spacing-top-offset: 65px;
 
   /* ############## */
   /* # TYPOGRAPHY # */
@@ -57,7 +57,7 @@
     --spacing-s: 12px;
     --spacing-m: 20px;
     --spacing-l: 28px;
-    --spacing-top-offset: 99px;
+    --spacing-top-offset: 79px;
   }
 }
 
