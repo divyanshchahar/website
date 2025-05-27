@@ -7,7 +7,7 @@
   padding: var(--spacing-m);
   border-radius: var(--radius-m);
   border: 1px solid var(--surface-cta);
-  max-width: 325px;
+  max-width: 250px;
 }
 
 .reasonHeading {
