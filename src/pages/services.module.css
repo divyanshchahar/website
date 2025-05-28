@@ -1,0 +1,110 @@
+.heroSectionContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-l);
+  text-align: center;
+  margin-top: var(--spacing-top-offset);
+}
+
+.imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  max-width: 1024px;
+  justify-content: center;
+  padding-top: var(--spacing-m);
+  padding-bottom: var(--spacing-m);
+  margin: auto;
+}
+
+.highlightedText {
+  color: var(--typography-branding);
+}
+
+/* ########### */
+/* # SERVICE # */
+/* ########### */
+
+.serviceContainer {
+  background-color: var(--surface-secondry);
+  padding: var(--spacing-m);
+  border-radius: var(--radius-s);
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-m);
+  gap: var(--spacing-m);
+  & ul {
+    li {
+      list-style-position: inside;
+    }
+  }
+}
+
+.innerContainer {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.mediaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  justify-content: center;
+  padding: var(--spacing-m);
+}
+
+.infographicContainer {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  min-width: min(50%, 250px);
+}
+
+.textContainer {
+  max-width: 500px;
+  min-width: min(50%, 250px);
+}
+
+.smallScreen {
+  display: block;
+  margin-bottom: var(--spacing-m);
+  margin-top: var(--spacing-m);
+}
+
+.bigScreen {
+  display: none;
+}
+
+.ctaButton {
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .mediaContainer {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .smallScreen {
+    display: none;
+  }
+
+  .bigScreen {
+    display: block;
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+  }
+
+  .ctaButton {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+/* ################ */
+/* # OUR SERVICES # */
+/* ################ */
+
+.servicesContainer {
+  padding: var(--spacing-m);
+  background-color: var(--surface-primary-2);
+}

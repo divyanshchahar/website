@@ -1,0 +1,83 @@
+/* ############## */
+/* # REASONCARD # */
+/* ############## */
+
+.reasonContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+  border-radius: var(--radius-m);
+  border: 1px solid var(--surface-cta);
+  max-width: 250px;
+}
+
+.reasonHeading {
+  color: var(--typography-branding);
+  text-align: center;
+  margin: var(--spacing-m);
+}
+
+.highlightedText {
+  color: var(--typography-branding);
+  font-weight: 750;
+}
+
+/* ############# */
+/* # OURVALUES # */
+/* ############# */
+
+.valuesContainer {
+  padding: var(--spacing-m);
+  background-color: var(--surface-primary-2);
+  margin-top: var(--spacing-top-offset);
+}
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  max-width: 1024px;
+  margin-top: var(--spacing-m);
+  margin: auto;
+}
+
+/* ################### */
+/* # DIRECTOR'S INFO # */
+/* ################### */
+
+.directorInfoContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+}
+
+.strikeThroughText {
+  text-decoration: line-through;
+}
+
+.imageContainer {
+  max-width: 500px;
+}
+
+.flexContainer {
+  display: flex;
+  gap: var(--spacing-m);
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1024px;
+  justify-content: center;
+  padding-top: var(--spacing-m);
+  padding-bottom: var(--spacing-m);
+}
+
+.directorsImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-m);
+}
+
+.textContainer {
+  max-width: 500px;
+}
+
+.ctaButton {
+  width: 100%;
+}

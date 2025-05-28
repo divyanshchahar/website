@@ -1,0 +1,125 @@
+/* ################ */
+/* # HERO SECTION # */
+/* ################ */
+
+.herosectionContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-l);
+  position: relative;
+  min-height: 300px;
+  margin-top: var(--spacing-top-offset);
+  z-index: -1;
+}
+
+.heroSectionImageContainer {
+  margin: auto;
+  max-width: 1024px;
+}
+
+.herosectionContainer p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  translate: -50% -50%;
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 551px) {
+  .herosectionContainer p {
+    top: 50%;
+  }
+}
+
+/* ############# */
+/* # TECH CARD # */
+/* ############# */
+
+.techCardContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+  margin: var(--spacing-m);
+  max-width: 350px;
+  border-radius: var(--radius-s);
+}
+
+.techCardContainer p {
+  margin-top: var(--spacing-m);
+}
+
+.techCardImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-m);
+  justify-content: space-between;
+}
+
+.techCardIcon {
+  height: var(--icon-height);
+  width: auto;
+  margin: var(--spacing-s);
+}
+
+.techCardCtaButton {
+  width: 100%;
+  margin-top: var(--spacing-m);
+}
+
+/* ################### */
+/* # SERVICE SECTION # */
+/* ################### */
+
+.serviceSectionContainer {
+  background-color: var(--surface-primary-2);
+  padding: var(--spacing-m);
+}
+
+.serviceSectionCardContainer {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  max-width: 1024px;
+}
+
+@media screen and (min-width: 900px) {
+  .serviceSectionCardContainer {
+    justify-content: start;
+  }
+}
+
+/* ################# */
+/* # WHY CHOOSE US # */
+/* ################# */
+
+.whatWeOfferContainer {
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-m);
+}
+
+.whatWeOfferMediaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--surface-primary-1);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-m);
+  max-width: 1024px;
+  margin: auto;
+  margin-top: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+.higlightedText {
+  color: var(--typography-branding);
+  font-weight: 750;
+}
+
+.whatWeOfferInnerContainer {
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}

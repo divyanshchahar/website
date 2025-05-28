@@ -1,0 +1,6 @@
+.container {
+  padding: var(--spacing-s);
+  background-color: var(--surface-secondry);
+  border: 1px solid var(--typography-primary);
+  border-radius: var(--radius-s);
+}

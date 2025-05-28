@@ -1,0 +1,127 @@
+import Button from "@/ui/components/Button";
+import styles from "./contactus.module.css";
+import CTAButton from "@/ui/components/CTAButton";
+import iconSchedule from "./../../public/icons/icon_meeting.svg";
+import externalLinks from "@/consts/externalLinks";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+export type DetailsOrScheduleInputs = {
+  name: string;
+  email: string;
+  contactNumber: string;
+  project: string;
+};
+
+const DetailsOrSchedule = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<DetailsOrScheduleInputs>();
+
+  const onSubmit: SubmitHandler<DetailsOrScheduleInputs> = (data) =>
+    console.log(data);
+
+  return (
+    <div className={styles.formContainer}>
+      <p>Book a meeting or fill out the form below and we will get in touch</p>
+
+      <br />
+
+      <hr />
+
+      <a
+        href={externalLinks.bookingUrl}
+        target="blank"
+        className="pointOnHover"
+      >
+        <CTAButton
+          buttonText="Book a Meeting"
+          buttonIcon={iconSchedule}
+          buttonIconName="Calendar"
+        />
+      </a>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <br />
+
+        <hr />
+
+        {/* NAME */}
+        <br />
+
+        <label>
+          Name <sup>*</sup>
+        </label>
+
+        <br />
+
+        <input
+          {...register("name", { required: "Name is Required" })}
+          placeholder="John Doe"
+        />
+        {errors.name?.message && (
+          <p className={styles.warning}>This filed is required</p>
+        )}
+
+        {/* EMAIL */}
+
+        <label>email</label>
+
+        <br />
+
+        <input {...register("email")} placeholder="email@website.com" />
+
+        {/* CONTACT NUMBER */}
+
+        <label>
+          contact number <sup>*</sup>
+        </label>
+
+        <br />
+
+        <input
+          {...register("contactNumber", {
+            required: "Please provide a contact number",
+          })}
+          placeholder="+91-0123456789"
+        />
+        {errors.contactNumber?.message && (
+          <p className={styles.warning}>This filed is required</p>
+        )}
+
+        {/* PROJECT DETAILS */}
+
+        <label>
+          Tell us about your project <sup>*</sup>
+        </label>
+
+        <br />
+
+        <textarea
+          {...register("project", {
+            required: "Please provide a briref description of your project",
+          })}
+          placeholder="Describe your project"
+        />
+
+        {errors.project?.message && (
+          <p className={styles.warning}>This filed is required</p>
+        )}
+
+        {/* SUBMIT BUTTON */}
+        <Button buttonText="Send Enquire" />
+      </form>
+    </div>
+  );
+};
+
+function Contactus() {
+  return (
+    <div className={styles.container}>
+      <DetailsOrSchedule />
+    </div>
+  );
+}
+
+export default Contactus;

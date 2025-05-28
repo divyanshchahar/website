@@ -1,0 +1,38 @@
+.container {
+  background-color: var(--surface-primary-2);
+  padding: var(--spacing-m);
+  height: 100vh;
+  margin-top: var(--spacing-top-offset);
+}
+
+.formContainer {
+  border: 1px solid white;
+  border-radius: var(--radius-m);
+  padding: var(--spacing-m);
+  max-width: 500px;
+  margin: auto;
+
+  & input,
+  textarea {
+    background-color: var(--surface-secondry);
+    color: var(--typography-primary);
+    margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing-s);
+    font-size: 1rem;
+    padding: var(--spacing-s);
+    border-radius: var(--radius-s);
+    width: 100%;
+    border: none;
+  }
+
+  & button {
+    margin-top: var(--spacing-m);
+    width: 100%;
+  }
+
+  & .warning {
+    color: var(--typography-warning);
+    font-size: 0.75rem;
+    margin-bottom: var(--spacing-m);
+  }
+}

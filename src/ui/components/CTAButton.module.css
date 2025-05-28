@@ -1,0 +1,12 @@
+.button {
+  padding: var(--spacing-s);
+  background-color: var(--surface-cta);
+  border-radius: var(--radius-s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}

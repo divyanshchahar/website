@@ -1,117 +1,235 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import Image, { StaticImageData } from "next/image";
+import heroSectionImage from "../../public/pictures/heroImage.png";
+import styles from "./Index.module.css";
+import { ReactElement } from "react";
+import iconApi from "./../../public/icons/icon_api.svg";
+import iconNext from "./../../public/icons/icon_nextjs.svg";
+import iconReact from "./../../public/icons/icon_react.svg";
+import iconExpress from "./../../public/icons/icon_express.svg";
+import iconNode from ".././../public/icons/icon_node.svg";
+import CTAButton from "@/ui/components/CTAButton";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
+import iconPeace from "../../public/icons/icon_peace.svg";
+import internalLinks from "@/consts/internalLinks";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const HeroSection = () => {
+  return (
+    <div className={styles.herosectionContainer}>
+      <div
+        style={{
+          maxWidth: "1024px",
+          margin: "auto",
+        }}
+      >
+        <Image
+          src={heroSectionImage}
+          alt="hero section"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+      <p className="h1">
+        We <span className={styles.strikeThrough}>make web apps</span> empower
+        business with technology
+      </p>
+    </div>
+  );
+};
+
+interface TechCardProps {
+  titleText: string;
+  descriptionText: ReactElement;
+  imageArrary: {
+    techImage: StaticImageData;
+    techName: string;
+  }[];
+}
+
+type ServiceSectionProps = TechCardProps[];
+
+const accordianProps = [
+  {
+    triggerText: "Quality",
+    itemValue: "Quality",
+    contentBody: (
+      <div>
+        Over the years we have learnt a lot form our mistakes and have set up
+        very{" "}
+        <span className={styles.higlightedText}>
+          rigorous and elaborate standard operating procedures
+        </span>{" "}
+        to ensure the{" "}
+        <span className={styles.higlightedText}>
+          highest standards of quality
+        </span>
+      </div>
+    ),
+  },
+  {
+    triggerText: "Commitment",
+    itemValue: "Commitment",
+    contentBody: (
+      <div>
+        At Leondevs{" "}
+        <span className={styles.higlightedText}>
+          a promise made is a promise kept
+        </span>
+        . We deliver on all the points mentioned in the agreement.
+      </div>
+    ),
+  },
+  {
+    triggerText: "Transparency",
+    itemValue: "Transparency",
+    contentBody: (
+      <div>
+        We operate with{" "}
+        <span className={styles.higlightedText}>100% transparency</span>. To
+        avoid any confusions we make an agreement listing all the requirements
+        and the expected time line of delivery
+      </div>
+    ),
+  },
+];
+
+const TechCard = ({
+  titleText,
+  descriptionText,
+  imageArrary,
+}: TechCardProps) => {
+  return (
+    <div className={styles.techCardContainer}>
+      <p className="h4">{titleText}</p>
+
+      {descriptionText}
+
+      <div className={styles.techCardImageContainer}>
+        {imageArrary.map((item) => {
+          return (
+            <div>
+              <Image
+                src={item.techImage}
+                alt={item.techName}
+                className={styles.techCardIcon}
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      <a href={internalLinks.contactus} className="pointerOnHover">
+        <CTAButton
+          buttonText="Get a Quote"
+          addedStyle={styles.techCardCtaButton}
+        />
+      </a>
+    </div>
+  );
+};
+
+const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
+  return (
+    <div className={styles.serviceSectionContainer}>
+      <h1 className="h1">Our Services</h1>
+
+      <div className={styles.serviceSectionCardContainer}>
+        {techCards.map((techCardItem) => {
+          return (
+            <TechCard
+              titleText={techCardItem.titleText}
+              descriptionText={techCardItem.descriptionText}
+              imageArrary={techCardItem.imageArrary}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const WhatWeOffer = () => {
+  return (
+    <div className={styles.whatWeOfferContainer}>
+      <h1 className="h3">What we Offer</h1>
+
+      <div className={styles.whatWeOfferMediaContainer}>
+        <div>
+          <div className={styles.whatWeOfferInnerContainer}>
+            <Image
+              src={iconPeace}
+              alt="api"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <h2 className={`h5 ${styles.higlightedText}`}>Peace of Mind</h2>
+          </div>
+        </div>
+
+        <AccordionPrimitive items={accordianProps} />
+      </div>
+    </div>
+  );
+};
+
+const techCards: ServiceSectionProps = [
+  {
+    titleText: "Frontend Solution",
+    descriptionText: (
+      <p>
+        At Leondevs we believe in making frontend/client apps with focus on
+        functionality, simplicity and consistent styling. JavaScript is our
+        language of choice for all frontend/client applications. Depending on
+        the requirements the frontend/client application will be built with
+        either React.js or with Next.js.
+      </p>
+    ),
+    imageArrary: [
+      { techImage: iconReact, techName: "React" },
+      { techImage: iconNext, techName: "React" },
+    ],
+  },
+  {
+    titleText: "Backend Solution",
+    descriptionText: (
+      <p>
+        At leondevs we offer complete Backend/Server side solutions for our
+        clients ranging from simple API servers to implementation of complex
+        business logic. Our language of choice is JavaScript which makes node.js
+        our defacto runtime. We build our backends in express.js.
+      </p>
+    ),
+    imageArrary: [
+      { techImage: iconNode, techName: "node js" },
+      { techImage: iconExpress, techName: "express js" },
+      { techImage: iconNext, techName: "next js" },
+      { techImage: iconApi, techName: "api" },
+    ],
+  },
+  {
+    titleText: "Ecommerce Solution",
+    descriptionText: (
+      <p>
+        At leondevs we offer complete Backend/Server side solutions for our
+        clients ranging from simple API servers to implementation of complex
+        business logic. Our language of choice is JavaScript which makes node.js
+        our defacto runtime. We build our backends in express.js.
+      </p>
+    ),
+    imageArrary: [
+      { techImage: iconNode, techName: "node js" },
+      { techImage: iconExpress, techName: "express js" },
+      { techImage: iconNext, techName: "next js" },
+      { techImage: iconApi, techName: "api" },
+      { techImage: iconReact, techName: "react js" },
+    ],
+  },
+];
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
-        <main className={styles.main}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol>
-            <li>
-              Get started by editing <code>src/pages/index.tsx</code>.
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
-
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className={styles.logo}
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-              />
-              Deploy now
-            </a>
-            <a
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.secondary}
-            >
-              Read our docs
-            </a>
-          </div>
-        </main>
-        <footer className={styles.footer}>
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
-          <a
-            href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/globe.svg"
-              alt="Globe icon"
-              width={16}
-              height={16}
-            />
-            Go to nextjs.org →
-          </a>
-        </footer>
-      </div>
+      <HeroSection />
+      <ServiceSection techCards={techCards} />
+      <WhatWeOffer />
     </>
   );
 }

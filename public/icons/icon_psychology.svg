@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="64"
+   viewBox="0 -960 2433.5201 2560"
+   width="60.838001"
+   fill="#e3e3e3"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="icon_psychology.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="13.551186"
+     inkscape:cx="24.684186"
+     inkscape:cy="30.69842"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="0"
+     inkscape:window-y="84"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg1" />
+  <path
+     d="m 384.00708,1600 v -550.4 q -182.4,-166.39999 -283.2,-388.79999 -100.80000416,-222.4 -100.80000416,-468.8 0,-480 336.00000416,-816 336,-336 816.00002,-336 400,0 708.8,235.2 308.8,235.2 401.6,612.8 l 166.4,656 q 16,60.8 -22.4,110.4 -38.4,49.6 -102.4,49.6 h -256 V 1088 q 0,105.6 -75.2,180.8 -75.2,75.2 -180.8,75.2 h -256 v 256 h -256 v -512 h 512 V 448.00001 h 345.6 l -121.6,-495.999997 q -73.6,-291.200003 -313.6,-473.600003 -240,-182.4 -550.4,-182.4 -371.20002,0 -633.60002,259.2 -262.4,259.2 -262.4,630.4 0,192 78.4,364.8 78.4,172.8 222.4,307.2 l 83.2,76.8 V 1600 Z M 1196.8071,448.00001 Z m -172.8,256 h 256 l 19.2,-160 q 25.6,-9.6 46.4,-22.4 20.8,-12.8 36.8,-28.8 l 147.2,64 128,-217.6 -128,-96 q 6.4,-25.6 6.4,-51.2 0,-25.6 -6.4,-51.2 l 128,-95.999997 -128,-217.600003 -147.2,64 q -16,-16 -36.8,-28.8 -20.8,-12.8 -46.4,-22.4 l -19.2,-160 h -256 l -19.2,160 q -25.59998,9.6 -46.39998,22.4 -20.8,12.8 -36.80004,28.8 l -147.2,-64 -128,217.600003 128,95.999997 q -6.4,25.6 -6.4,51.2 0,25.6 6.4,51.2 l -128,96 128,217.6 147.2,-64 q 16.00004,16 36.80004,28.8 20.8,12.8 46.39998,22.4 z m 128,-320 q -80,0 -136,-56 -55.99998,-56 -55.99998,-136 0,-80 55.99998,-135.999997 56,-55.999999863166 136,-55.999999863166 80,0 136,55.999999863166 56,55.999997 56,135.999997 0,80 -56,136 -56,56 -136,56 z"
+     id="path1"
+     style="fill:#ddb444;fill-opacity:1;stroke-width:3.2" />
+</svg>
