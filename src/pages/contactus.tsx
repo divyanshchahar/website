@@ -35,7 +35,9 @@ const DetailsOrSchedule = () => {
 
         <br />
 
-        <label>Name</label>
+        <label>
+          Name <sup>*</sup>
+        </label>
         <br />
         <input type="text" placeholder="John Doe" />
 
@@ -49,14 +51,18 @@ const DetailsOrSchedule = () => {
         <br />
         <br />
 
-        <label>contact number</label>
+        <label>
+          contact number <sup>*</sup>
+        </label>
         <br />
         <input type="text" placeholder="+91-0123456789" />
 
         <br />
         <br />
 
-        <label>Tell us about your project</label>
+        <label>
+          Tell us about your project <sup>*</sup>
+        </label>
         <br />
         <textarea placeholder="Describe your project" />
 
