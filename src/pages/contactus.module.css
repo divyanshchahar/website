@@ -17,6 +17,7 @@
     background-color: var(--surface-secondry);
     color: var(--typography-primary);
     margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing-s);
     font-size: 1rem;
     padding: var(--spacing-s);
     border-radius: var(--radius-s);
@@ -27,5 +28,11 @@
   & button {
     margin-top: var(--spacing-m);
     width: 100%;
+  }
+
+  & .warning {
+    color: var(--typography-warning);
+    font-size: 0.75rem;
+    margin-bottom: var(--spacing-m);
   }
 }
