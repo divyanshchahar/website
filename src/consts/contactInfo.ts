@@ -1,5 +1,5 @@
 const contactInfo = {
-  emailAddress: "mail@company.com",
+  emailAddress: "mail@leondevs.tech",
   mobileno: "+91-0123456789",
 };
 
