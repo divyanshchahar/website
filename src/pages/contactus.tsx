@@ -9,7 +9,7 @@ export type DetailsOrScheduleInputs = {
   name: string;
   email: string;
   contactNumber: string;
-  project: string;
+  projectDetails: string;
 };
 
 const DetailsOrSchedule = () => {
@@ -19,8 +19,21 @@ const DetailsOrSchedule = () => {
     formState: { errors },
   } = useForm<DetailsOrScheduleInputs>();
 
-  const onSubmit: SubmitHandler<DetailsOrScheduleInputs> = (data) =>
-    console.log(data);
+  const onSubmit: SubmitHandler<DetailsOrScheduleInputs> = async (data) => {
+    try {
+      const res = await fetch("/api/inquiries", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className={styles.formContainer}>
@@ -99,13 +112,13 @@ const DetailsOrSchedule = () => {
         <br />
 
         <textarea
-          {...register("project", {
+          {...register("projectDetails", {
             required: "Please provide a briref description of your project",
           })}
           placeholder="Describe your project"
         />
 
-        {errors.project?.message && (
+        {errors.projectDetails?.message && (
           <p className={styles.warning}>This filed is required</p>
         )}
 
