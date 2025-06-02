@@ -6,11 +6,9 @@ import companyLogo from "../../../public/icons/leondevs_logo.svg";
 import hamburgerMenu from "../../../public/icons/icon_hamburger_menu.svg";
 import styles from "./TopNavBar.module.css";
 import { DropdownMenu } from "radix-ui";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 function MyDropDownMenu() {
-  const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
   return (
@@ -26,7 +24,7 @@ function MyDropDownMenu() {
       <DropdownMenu.Portal>
         <DropdownMenu.Content className={styles.dropDownMenuContent}>
           <DropdownMenu.Item
-            onSelect={(e) => {
+            onSelect={() => {
               router.push("/services");
             }}
           >
@@ -36,7 +34,7 @@ function MyDropDownMenu() {
           <DropdownMenu.Separator className={styles.seprator} />
 
           <DropdownMenu.Item
-            onSelect={(e) => {
+            onSelect={() => {
               router.push("/aboutus");
             }}
           >
