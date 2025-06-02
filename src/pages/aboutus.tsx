@@ -51,9 +51,10 @@ const OurValues = ({ reasons }: OurValuesProps) => {
       <h1 className="h4">Our Values</h1>
       <br />
       <div className={styles.reasons}>
-        {reasons.map((reason) => {
+        {reasons.map((reason, i) => {
           return (
             <ReasonCard
+              key={i}
               reasonImage={reason.reasonImage}
               reasonHeading={reason.reasonHeading}
               reasonBody={reason.reasonBody}
