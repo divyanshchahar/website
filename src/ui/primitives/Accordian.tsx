@@ -24,7 +24,11 @@ function AccordionPrimitive({ items }: AccordianPrimitiveProps) {
   return (
     <Accordion.Root type="multiple" className={styles.root}>
       {items.map((item, index) => (
-        <Accordion.Item value={item.itemValue} className={`${styles.item}`}>
+        <Accordion.Item
+          key={index}
+          value={item.itemValue}
+          className={`${styles.item}`}
+        >
           <Accordion.Header className={headerClass(index, items.length)}>
             <Accordion.Trigger className={styles.trigger}>
               {item.triggerText}

@@ -1,7 +1,6 @@
 import { StaticImageData } from "next/image";
 import styles from "./CTAButton.module.css";
 import Image from "next/image";
-import iconApi from "../../../public/icons/icon_api.svg";
 
 export type CTAButtonProps = {
   buttonText: string;
