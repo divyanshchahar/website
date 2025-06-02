@@ -29,7 +29,7 @@ const DetailsOrSchedule = () => {
         body: JSON.stringify(data),
       });
 
-      const json = await res.json();
+      await res.json();
     } catch (error) {
       console.log(error);
     }
