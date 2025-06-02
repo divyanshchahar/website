@@ -104,9 +104,9 @@ const TechCard = ({
       {descriptionText}
 
       <div className={styles.techCardImageContainer}>
-        {imageArrary.map((item) => {
+        {imageArrary.map((item, i) => {
           return (
-            <div>
+            <div key={i}>
               <Image
                 src={item.techImage}
                 alt={item.techName}
@@ -133,9 +133,10 @@ const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
       <h1 className="h1">Our Services</h1>
 
       <div className={styles.serviceSectionCardContainer}>
-        {techCards.map((techCardItem) => {
+        {techCards.map((techCardItem, i) => {
           return (
             <TechCard
+              key={i}
               titleText={techCardItem.titleText}
               descriptionText={techCardItem.descriptionText}
               imageArrary={techCardItem.imageArrary}
