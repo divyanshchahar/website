@@ -4,7 +4,7 @@ const uri = process.env.MONGODB_URI as string; // your mongodb connection string
 const options = {};
 
 declare global {
-  var _mongoClientPromise: Promise<MongoClient>;
+  var _mongoClientPromise: Promise<MongoClient>; /*eslint no-var: "off"*/
 }
 
 class Singleton {
