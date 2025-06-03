@@ -64,10 +64,6 @@ function TopNavBar() {
             linkAddress={internalLinks.services}
             linkText="Our Services"
           />
-
-          <NavLink linkAddress="" linkText="Technologies" />
-
-          <NavLink linkAddress="" linkText="Portfolio" />
         </div>
 
         <a href={internalLinks.contactus} target="blank">

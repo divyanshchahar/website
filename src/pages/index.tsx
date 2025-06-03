@@ -206,7 +206,7 @@ const techCards: ServiceSectionProps = [
     ],
   },
   {
-    titleText: "Ecommerce Solution",
+    titleText: "E-Commerce Solution",
     descriptionText: (
       <p>
         At leondevs we offer complete Backend/Server side solutions for our

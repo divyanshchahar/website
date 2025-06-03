@@ -1,6 +1,6 @@
 const contactInfo = {
   emailAddress: "mail@leondevs.tech",
-  mobileno: "+91-0123456789",
+  mobileno: "+91-9599698815",
 };
 
 export default contactInfo;

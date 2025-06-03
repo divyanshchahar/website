@@ -194,7 +194,7 @@ const BackEnd = () => {
 const Ecommerce = () => {
   return (
     <div className={styles.serviceContainer}>
-      <h2 className="h4">Ecommerce Store</h2>
+      <h2 className="h4">E-Commerce Store</h2>
 
       <p>
         We specialise in building custom E-commerce stores including payment
