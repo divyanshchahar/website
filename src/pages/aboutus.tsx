@@ -8,6 +8,7 @@ import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
 import CTAButton from "@/ui/components/CTAButton";
 import iconMeeting from "../../public/icons/icon_meeting.svg";
 import { ReactElement } from "react";
+import internalLinks from "@/consts/internalLinks";
 
 export interface ReasonCardProps {
   reasonImage: StaticImageData;
@@ -108,12 +109,14 @@ const DirectorsInfo = () => {
 
           <br />
 
-          <CTAButton
-            buttonText="Book a meeting"
-            buttonIcon={iconMeeting}
-            buttonIconName="calendar"
-            addedStyle={styles.ctaButton}
-          />
+          <a href={internalLinks.contactus} target="blank">
+            <CTAButton
+              buttonText="Book a meeting"
+              buttonIcon={iconMeeting}
+              buttonIconName="calendar"
+              addedStyle={styles.ctaButton}
+            />
+          </a>
         </div>
       </div>
     </div>
