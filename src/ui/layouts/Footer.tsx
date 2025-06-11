@@ -42,12 +42,11 @@ const InternalLinkContainer = ({ groupName, links }: LinkContainerPorps) => {
   return (
     <div>
       <h4 className="h6">{groupName}</h4>
-      {links.map((link) => {
+      {links.map((link, index) => {
         return (
-          <>
+          <div key={index}>
             <NavLink linkText={link.linkText} linkAddress={link.linkAddress} />
-            <br />
-          </>
+          </div>
         );
       })}
     </div>
@@ -59,14 +58,13 @@ const ExternalLinkContainer = ({ groupName, links }: LinkContainerPorps) => {
     <>
       <div>
         <h4 className="h6">{groupName}</h4>
-        {links.map((link) => {
+        {links.map((link, index) => {
           return (
-            <>
+            <div key={index}>
               <a href={link.linkAddress} target="_blank">
                 {link.linkText}
               </a>
-              <br />
-            </>
+            </div>
           );
         })}
       </div>
