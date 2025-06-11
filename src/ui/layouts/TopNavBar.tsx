@@ -7,6 +7,8 @@ import hamburgerMenu from "../../../public/icons/icon_hamburger_menu.svg";
 import styles from "./TopNavBar.module.css";
 import { DropdownMenu } from "radix-ui";
 import { useRouter } from "next/router";
+import Button from "../components/Button";
+import { signIn, useSession } from "next-auth/react";
 
 function MyDropDownMenu() {
   const router = useRouter();
@@ -69,6 +71,8 @@ function TopNavBar() {
         <a href={internalLinks.contactus} target="blank">
           <CTAButton buttonText="Get a Quote" />
         </a>
+
+        <Button clickHandler={() => signIn()} buttonText="Sign In" />
       </div>
     </header>
   );
