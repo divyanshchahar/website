@@ -16,6 +16,13 @@
   --surface-secondry: #000;
   --surface-cta: #ddb344;
 
+  --color-primary: #ffffff;
+  --color-secondry: #000000;
+  --color-branding: #ddb344;
+  --color-warning: #ff0000;
+  --color-accepted: #00ff00;
+  --color-tertiary: #b2b2b2;
+
   /* ########### */
   /* # SPACING # */
   /* ########### */
@@ -24,6 +31,18 @@
   --spacing-m: 16px;
   --spacing-l: 24px;
   --spacing-top-offset: 65px;
+
+  --spacing-s0: 0;
+  --spacing-s1: 8px;
+  --spacing-s2: 12px;
+  --spacing-s3: 16px;
+  --spacing-s4: 20px;
+  --spacing-s5: 24px;
+  --spacing-s6: 28px;
+  --spacing-s7: 32px;
+  --spacing-s8: 36px;
+  --spacing-s9: 40px;
+  --spacing-s10: 44px;
 
   /* ############## */
   /* # TYPOGRAPHY # */
@@ -35,6 +54,14 @@
   --typography-warning: #ff0000;
   --typography-correct: #00ff00;
   --typography-branding: #ddb344;
+
+  --typography-fs0: 0.83rem;
+  --typography-fs1: 1rem;
+  --typography-fs2: 1.2rem;
+  --typography-fs3: 1.44rem;
+  --typography-fs4: 1.72rem;
+  --typography-fs5: 2.07rem;
+  --typography-fs6: 2.48rem;
 
   /* ######### */
   /* # ICONS # */
@@ -58,6 +85,18 @@
     --spacing-m: 20px;
     --spacing-l: 28px;
     --spacing-top-offset: 79px;
+
+    --spacing-s0: 0;
+    --spacing-s1: 12px;
+    --spacing-s2: 16px;
+    --spacing-s3: 20px;
+    --spacing-s4: 24px;
+    --spacing-s5: 28px;
+    --spacing-s6: 32px;
+    --spacing-s7: 36px;
+    --spacing-s8: 40px;
+    --spacing-s9: 44px;
+    --spacing-s10: 48px;
   }
 }
 
@@ -71,6 +110,18 @@
     --spacing-m: 24px;
     --spacing-l: 32px;
     --spacing-top-offset: 95px;
+
+    --spacing-s0: 0;
+    --spacing-s1: 16px;
+    --spacing-s2: 20px;
+    --spacing-s3: 24px;
+    --spacing-s4: 28px;
+    --spacing-s5: 32px;
+    --spacing-s6: 36px;
+    --spacing-s7: 40px;
+    --spacing-s8: 44px;
+    --spacing-s9: 48px;
+    --spacing-s10: 52px;
   }
 }
 
