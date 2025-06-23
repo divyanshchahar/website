@@ -6,6 +6,8 @@ import companyLogo from "../../../public/icons/leondevs_logo.svg";
 import hamburgerMenu from "../../../public/icons/icon_hamburger_menu.svg";
 import styles from "./TopNavBar.module.css";
 import { DropdownMenu } from "radix-ui";
+import Button from "../components/Button";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 
 function MyDropDownMenu() {
@@ -47,6 +49,10 @@ function MyDropDownMenu() {
 }
 
 function TopNavBar() {
+  const { data, status } = useSession();
+
+  const router = useRouter();
+
   return (
     <header>
       <div className={styles.container1}>
@@ -65,6 +71,18 @@ function TopNavBar() {
             linkText="Our Services"
           />
         </div>
+
+        {status === "authenticated" ? (
+          <Button
+            buttonText="Dashboard"
+            clickHandler={() => router.push("/dashboard")}
+          />
+        ) : (
+          <Button
+            buttonText="Join Referral Program"
+            clickHandler={() => signIn("google")}
+          />
+        )}
 
         <a href={internalLinks.contactus} target="blank">
           <CTAButton buttonText="Get a Quote" />

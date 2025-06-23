@@ -1,9 +1,9 @@
-import Button from "@/ui/components/Button";
-import styles from "./contactus.module.css";
-import CTAButton from "@/ui/components/CTAButton";
-import iconSchedule from "./../../public/icons/icon_meeting.svg";
 import externalLinks from "@/consts/externalLinks";
-import { useForm, SubmitHandler } from "react-hook-form";
+import Button from "@/ui/components/Button";
+import CTAButton from "@/ui/components/CTAButton";
+import { SubmitHandler, useForm } from "react-hook-form";
+import iconSchedule from "./../../public/icons/icon_meeting.svg";
+import styles from "./contactus.module.css";
 
 export type DetailsOrScheduleInputs = {
   name: string;
