@@ -11,10 +11,10 @@
   /* # COLORS # */
   /* ########## */
 
-  --surface-primary-1: #1a1a1a;
+  /* --surface-primary-1: #1a1a1a;
   --surface-primary-2: #333;
   --surface-secondry: #000;
-  --surface-cta: #ddb344;
+  --surface-cta: #ddb344; */
 
   --color-primary: #ffffff;
   --color-secondry: #000000;
@@ -27,10 +27,10 @@
   /* # SPACING # */
   /* ########### */
 
-  --spacing-s: 8px;
+  /* --spacing-s: 8px;
   --spacing-m: 16px;
   --spacing-l: 24px;
-  --spacing-top-offset: 65px;
+  --spacing-top-offset: 65px; */
 
   --spacing-s0: 0;
   --spacing-s1: 8px;
@@ -48,12 +48,12 @@
   /* # TYPOGRAPHY # */
   /* ############## */
 
-  --typography-primary: #fff;
+  /* --typography-primary: #fff;
   --typography-scondry: #b2b2b2;
   --typography-cta: #fff;
   --typography-warning: #ff0000;
   --typography-correct: #00ff00;
-  --typography-branding: #ddb344;
+  --typography-branding: #ddb344; */
 
   --typography-fs0: 0.83rem;
   --typography-fs1: 1rem;
@@ -81,10 +81,10 @@
     /* # SPACING # */
     /* ########### */
 
-    --spacing-s: 12px;
+    /* --spacing-s: 12px;
     --spacing-m: 20px;
     --spacing-l: 28px;
-    --spacing-top-offset: 79px;
+    --spacing-top-offset: 79px; */
 
     --spacing-s0: 0;
     --spacing-s1: 12px;
@@ -106,10 +106,10 @@
     /* # SPACING # */
     /* ########### */
 
-    --spacing-s: 16px;
+    /* --spacing-s: 16px;
     --spacing-m: 24px;
     --spacing-l: 32px;
-    --spacing-top-offset: 95px;
+    --spacing-top-offset: 95px; */
 
     --spacing-s0: 0;
     --spacing-s1: 16px;
@@ -127,7 +127,7 @@
 
 body {
   font-size: 1rem;
-  color: var(--typography-primary);
+  color: var(--color-secondry);
   margin: 0;
   padding: 0;
 }
@@ -135,7 +135,7 @@ body {
 button {
   border: none;
   background: transparent;
-  color: var(--typography-primary);
+  color: var(--color-secondry);
 }
 
 button:hover {
@@ -144,7 +144,7 @@ button:hover {
 
 a {
   text-decoration: none;
-  color: var(--typography-cta);
+  color: var(--color-secondry);
 }
 
 .h1 {
