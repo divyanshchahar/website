@@ -1,16 +1,16 @@
-import Image, { StaticImageData } from "next/image";
-import heroSectionImage from "../../public/pictures/heroImage.png";
-import styles from "./Index.module.css";
-import { ReactElement } from "react";
-import iconApi from "./../../public/icons/icon_api.svg";
-import iconNext from "./../../public/icons/icon_nextjs.svg";
-import iconReact from "./../../public/icons/icon_react.svg";
-import iconExpress from "./../../public/icons/icon_express.svg";
-import iconNode from ".././../public/icons/icon_node.svg";
+import internalLinks from "@/consts/internalLinks";
 import CTAButton from "@/ui/components/CTAButton";
 import AccordionPrimitive from "@/ui/primitives/Accordian";
+import Image from "next/image";
+import { ReactElement } from "react";
 import iconPeace from "../../public/icons/icon_peace.svg";
-import internalLinks from "@/consts/internalLinks";
+import heroSectionImage from "../../public/pictures/heroImage.png";
+import iconNode from ".././../public/icons/icon_node.svg";
+import iconApi from "./../../public/icons/icon_api.svg";
+import iconExpress from "./../../public/icons/icon_express.svg";
+import iconNext from "./../../public/icons/icon_nextjs.svg";
+import iconReact from "./../../public/icons/icon_react.svg";
+import styles from "./Index.module.css";
 
 const HeroSection = () => {
   return (
@@ -32,10 +32,6 @@ const HeroSection = () => {
 interface TechCardProps {
   titleText: string;
   descriptionText: ReactElement;
-  imageArrary: {
-    techImage: StaticImageData;
-    techName: string;
-  }[];
 }
 
 type ServiceSectionProps = TechCardProps[];
@@ -85,30 +81,12 @@ const accordianProps = [
   },
 ];
 
-const TechCard = ({
-  titleText,
-  descriptionText,
-  imageArrary,
-}: TechCardProps) => {
+const TechCard = ({ titleText, descriptionText }: TechCardProps) => {
   return (
-    <div className={styles.techCardContainer}>
+    <div className={`${styles.techCardContainer} greyShadow`}>
       <p className="h4">{titleText}</p>
 
       {descriptionText}
-
-      <div className={styles.techCardImageContainer}>
-        {imageArrary.map((item, i) => {
-          return (
-            <div key={i}>
-              <Image
-                src={item.techImage}
-                alt={item.techName}
-                className={styles.techCardIcon}
-              />
-            </div>
-          );
-        })}
-      </div>
 
       <a href={internalLinks.contactus} className="pointerOnHover">
         <CTAButton
@@ -124,7 +102,7 @@ const TechCard = ({
 const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
   return (
     <div className={styles.serviceSectionContainer}>
-      <h1 className="h1">Our Services</h1>
+      <h1 className="h4">Our Services</h1>
 
       <div className={styles.serviceSectionCardContainer}>
         {techCards.map((techCardItem, i) => {
@@ -133,7 +111,6 @@ const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
               key={i}
               titleText={techCardItem.titleText}
               descriptionText={techCardItem.descriptionText}
-              imageArrary={techCardItem.imageArrary}
             />
           );
         })}
