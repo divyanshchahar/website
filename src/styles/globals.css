@@ -99,6 +99,8 @@
     --spacing-s8: 40px;
     --spacing-s9: 44px;
     --spacing-s10: 48px;
+
+    --spacing-topOffset: 81px;
   }
 }
 
@@ -124,6 +126,8 @@
     --spacing-s8: 44px;
     --spacing-s9: 48px;
     --spacing-s10: 52px;
+
+    --spacing-topOffset: 97px;
   }
 }
 
