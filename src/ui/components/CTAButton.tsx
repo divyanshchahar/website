@@ -8,7 +8,7 @@ export type CTAButtonProps = {
   buttonIcon?: StaticImageData;
   buttonIconName?: string;
   version?: "solid" | "outline";
-  clickHandler: () => {};
+  clickHandler: () => void;
 };
 
 function CTAButton({
