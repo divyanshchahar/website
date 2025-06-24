@@ -47,14 +47,15 @@
 
 .techCardContainer {
   background-color: var(--surface-primary-1);
-  padding: var(--spacing-m);
+  padding: var(--spacing-s3);
   margin: var(--spacing-m);
   max-width: 350px;
   border-radius: var(--radius-s);
 }
 
 .techCardContainer p {
-  margin-top: var(--spacing-m);
+  margin-top: var(--spacing-s3);
+  margin-bottom: var(--spacing-s3);
 }
 
 .techCardImageContainer {
@@ -80,23 +81,17 @@
 /* ################### */
 
 .serviceSectionContainer {
-  background-color: var(--surface-primary-2);
-  padding: var(--spacing-m);
+  padding: var(--spacing-s5);
 }
 
 .serviceSectionCardContainer {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-
+  gap: var(--spacing-s4);
   justify-content: center;
   max-width: 1024px;
-}
-
-@media screen and (min-width: 900px) {
-  .serviceSectionCardContainer {
-    justify-content: start;
-  }
+  margin-top: var(--spacing-s4);
 }
 
 /* ################# */
