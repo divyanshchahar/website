@@ -7,6 +7,8 @@ export type CTAButtonProps = {
   addedStyle?: string;
   buttonIcon?: StaticImageData;
   buttonIconName?: string;
+  version?: "solid" | "outline";
+  clickHandler: () => {};
 };
 
 function CTAButton({
@@ -14,14 +16,19 @@ function CTAButton({
   addedStyle,
   buttonIcon,
   buttonIconName,
+  version = "solid",
+  clickHandler,
 }: CTAButtonProps) {
   const isIconPresent =
     buttonIcon !== undefined && buttonIconName !== undefined;
 
   return (
-    <button className={`${styles.button} ${addedStyle}`}>
-      {
-        <>
+    <>
+      {version === "solid" ? (
+        <button
+          className={`${styles.button} ${styles.solid} ${addedStyle}`}
+          onClick={() => clickHandler()}
+        >
           {isIconPresent && (
             <Image
               src={buttonIcon}
@@ -30,9 +37,20 @@ function CTAButton({
             />
           )}
           {buttonText}
-        </>
-      }
-    </button>
+        </button>
+      ) : (
+        <button className={`${styles.button} ${styles.outline} ${addedStyle}`}>
+          {isIconPresent && (
+            <Image
+              src={buttonIcon}
+              alt={buttonIconName}
+              style={{ height: "1rem", width: "auto", marginRight: "1rem" }}
+            />
+          )}
+          {buttonText}
+        </button>
+      )}
+    </>
   );
 }
 
