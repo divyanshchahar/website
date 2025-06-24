@@ -15,23 +15,16 @@ import internalLinks from "@/consts/internalLinks";
 const HeroSection = () => {
   return (
     <div className={styles.herosectionContainer}>
-      <div
-        style={{
-          maxWidth: "1024px",
-          margin: "auto",
-        }}
-      >
+      <div>
+        <p className="h1">One Web App for all screens</p>
+      </div>
+      <div className={styles.heroSectionImageContainer}>
         <Image
           src={heroSectionImage}
           alt="hero section"
           style={{ width: "100%", height: "auto" }}
         />
       </div>
-
-      <p className="h1">
-        We <span className={styles.strikeThrough}>make web apps</span> empower
-        business with technology
-      </p>
     </div>
   );
 };
@@ -121,6 +114,7 @@ const TechCard = ({
         <CTAButton
           buttonText="Get a Quote"
           addedStyle={styles.techCardCtaButton}
+          clickHandler={() => {}}
         />
       </a>
     </div>
