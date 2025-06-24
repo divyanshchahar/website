@@ -186,3 +186,7 @@ a {
 .pointerOnHover:hover {
   cursor: pointer;
 }
+
+.greyShadow {
+  box-shadow: 4px 4px 8px 0px var(--color-tertiary);
+}
