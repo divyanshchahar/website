@@ -1,0 +1,29 @@
+.container {
+  background-color: var(--color-secondry);
+  color: var(--color-primary);
+  padding: var(--spacing-s5);
+
+  & p {
+    margin-bottom: var(--spacing-s4);
+  }
+}
+
+.container ul {
+  list-style-position: inside;
+  list-style-image: url("../../../public/icons/icon_correct.svg");
+}
+
+.container li {
+  padding-top: var(--spacing-s1);
+}
+
+.diagramContainer {
+  max-width: 500px;
+  margin: auto;
+  border-radius: var(--radius-s);
+  border: 1px solid white;
+  padding: var(--spacing-s2);
+  box-shadow: -4px -4px 8px var(--color-primary),
+    -4px 4px 8px var(--color-primary), 4px -4px 8px var(--color-primary),
+    4px 4px 8px var(--color-primary);
+}
