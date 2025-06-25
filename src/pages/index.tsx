@@ -1,9 +1,7 @@
 import internalLinks from "@/consts/internalLinks";
 import CTAButton from "@/ui/components/CTAButton";
-import AccordionPrimitive from "@/ui/primitives/Accordian";
 import Image from "next/image";
 import { ReactElement } from "react";
-import iconPeace from "../../public/icons/icon_peace.svg";
 import heroSectionImage from "../../public/pictures/heroImage.png";
 import iconNode from ".././../public/icons/icon_node.svg";
 import iconApi from "./../../public/icons/icon_api.svg";
@@ -179,6 +177,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ServiceSection techCards={techCards} />
+      <SdlcLayout />
     </>
   );
 }
