@@ -1,0 +1,22 @@
+.postBookingContainer {
+  padding: var(--spacing-s4);
+}
+
+.mainHeading {
+  margin-bottom: var(--spacing-s3);
+}
+
+.cardContainer {
+  max-width: 500px;
+  padding: var(--spacing-s2);
+  border-radius: var(--radius-s);
+  margin: auto;
+}
+
+.stageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s1);
+  margin-top: var(--spacing-s2);
+  margin-bottom: var(--spacing-s2);
+}
