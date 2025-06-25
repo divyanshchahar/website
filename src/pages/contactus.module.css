@@ -1,38 +1,26 @@
-.container {
-  background-color: var(--surface-primary-2);
-  padding: var(--spacing-m);
-  height: 100vh;
-  margin-top: var(--spacing-top-offset);
+.postBookingContainer {
+  padding: var(--spacing-s4);
 }
 
-.formContainer {
-  border: 1px solid white;
-  border-radius: var(--radius-m);
-  padding: var(--spacing-m);
+.mainHeading {
+  margin-bottom: var(--spacing-s3);
+}
+
+.cardContainer {
   max-width: 500px;
+  padding: var(--spacing-s2);
+  border-radius: var(--radius-s);
   margin: auto;
+}
 
-  & input,
-  textarea {
-    background-color: var(--surface-secondry);
-    color: var(--typography-primary);
-    margin-top: var(--spacing-s);
-    margin-bottom: var(--spacing-s);
-    font-size: 1rem;
-    padding: var(--spacing-s);
-    border-radius: var(--radius-s);
-    width: 100%;
-    border: none;
-  }
+.stageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s1);
+  margin-top: var(--spacing-s2);
+  margin-bottom: var(--spacing-s2);
+}
 
-  & button {
-    margin-top: var(--spacing-m);
-    width: 100%;
-  }
-
-  & .warning {
-    color: var(--typography-warning);
-    font-size: 0.75rem;
-    margin-bottom: var(--spacing-m);
-  }
+.pageContainer {
+  margin-top: var(--spacing-topOffset);
 }
