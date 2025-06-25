@@ -10,6 +10,7 @@ import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
 import SdlcLayout from "@/ui/layouts/SdlcLayout";
+import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
 
 const HeroSection = () => {
   return (
@@ -178,6 +179,7 @@ export default function Home() {
       <HeroSection />
       <ServiceSection techCards={techCards} />
       <SdlcLayout />
+      <ContactUsLayout />
     </>
   );
 }
