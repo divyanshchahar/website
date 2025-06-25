@@ -36,7 +36,10 @@
 @media screen and (min-width: 990px) {
   .links {
     display: flex;
-    gap: var(--spacing-m);
+    gap: var(--spacing-s2);
+    & a {
+      color: var(--color-primary);
+    }
   }
 
   .iconButton {
