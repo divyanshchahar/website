@@ -11,6 +11,7 @@ import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
+import SdlcLayout from "@/ui/layouts/SdlcLayout";
 
 const HeroSection = () => {
   return (
@@ -119,29 +120,6 @@ const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
   );
 };
 
-const WhatWeOffer = () => {
-  return (
-    <div className={styles.whatWeOfferContainer}>
-      <h1 className="h3">What we Offer</h1>
-
-      <div className={styles.whatWeOfferMediaContainer}>
-        <div>
-          <div className={styles.whatWeOfferInnerContainer}>
-            <Image
-              src={iconPeace}
-              alt="api"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <h2 className={`h5 ${styles.higlightedText}`}>Peace of Mind</h2>
-          </div>
-        </div>
-
-        <AccordionPrimitive items={accordianProps} />
-      </div>
-    </div>
-  );
-};
-
 const techCards: ServiceSectionProps = [
   {
     titleText: "Frontend Solution",
@@ -201,7 +179,6 @@ export default function Home() {
     <>
       <HeroSection />
       <ServiceSection techCards={techCards} />
-      <WhatWeOffer />
     </>
   );
 }
