@@ -1,23 +1,38 @@
+/* ################ */
+/* # HERO SECTION # */
+/* ################ */
+
 .heroSectionContainer {
-  background-color: var(--surface-primary-1);
-  padding: var(--spacing-l);
-  text-align: center;
-  margin-top: var(--spacing-top-offset);
+  display: flex;
+  gap: var(--spacing-s1);
+  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    var(--color-branding) -0.14%,
+    var(--color-secondry) 99.94%
+  );
+  padding: var(--spacing-s3);
+  margin-top: var(--spacing-topOffset);
+  color: var(--color-primary);
+
+  & p {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .imageContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-m);
+  gap: var(--spacing-s1);
   max-width: 1024px;
   justify-content: center;
-  padding-top: var(--spacing-m);
-  padding-bottom: var(--spacing-m);
   margin: auto;
 }
 
 .highlightedText {
-  color: var(--typography-branding);
+  color: var(--color-branding);
 }
 
 /* ########### */
@@ -107,4 +122,16 @@
 .servicesContainer {
   padding: var(--spacing-m);
   background-color: var(--surface-primary-2);
+}
+
+/* ################## */
+/* # OUR TECH STACK # */
+/* ################## */
+
+.pageHeading {
+  margin-bottom: var(--spacing-s4);
+}
+
+.pagePadding {
+  padding: var(--spacing-s5);
 }
