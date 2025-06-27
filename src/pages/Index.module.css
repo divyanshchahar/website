@@ -17,7 +17,6 @@
 }
 
 .heroSectionImageContainer {
-  margin: auto;
   max-width: 100%;
 }
 
@@ -33,10 +32,10 @@
 @media screen and (min-width: 480px) {
   .herosectionContainer {
     flex-direction: row;
+    justify-content: center;
   }
 
   .heroSectionImageContainer {
-    margin: auto;
     max-width: 50%;
   }
 }
@@ -46,29 +45,14 @@
 /* ############# */
 
 .techCardContainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--surface-primary-1);
   padding: var(--spacing-s3);
-  margin: var(--spacing-m);
+  gap: var(--spacing-s2);
   max-width: 350px;
   border-radius: var(--radius-s);
-}
-
-.techCardContainer p {
-  margin-top: var(--spacing-s3);
-  margin-bottom: var(--spacing-s3);
-}
-
-.techCardImageContainer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-m);
-  justify-content: space-between;
-}
-
-.techCardIcon {
-  height: var(--icon-height);
-  width: auto;
-  margin: var(--spacing-s);
+  justify-content: space-around;
 }
 
 .techCardCtaButton {
@@ -90,38 +74,5 @@
   flex-wrap: wrap;
   gap: var(--spacing-s4);
   justify-content: center;
-  max-width: 1024px;
   margin-top: var(--spacing-s4);
-}
-
-/* ################# */
-/* # WHY CHOOSE US # */
-/* ################# */
-
-.whatWeOfferContainer {
-  background-color: var(--surface-primary-1);
-  padding: var(--spacing-m);
-}
-
-.whatWeOfferMediaContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--surface-primary-1);
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-m);
-  max-width: 1024px;
-  margin: auto;
-  margin-top: var(--spacing-m);
-  margin-bottom: var(--spacing-m);
-}
-.higlightedText {
-  color: var(--typography-branding);
-  font-weight: 750;
-}
-
-.whatWeOfferInnerContainer {
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
 }
