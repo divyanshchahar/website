@@ -1,16 +1,18 @@
-import iconNode from "../../public/icons/icon_node.svg";
-import iconExpress from "../../public/icons/icon_express.svg";
-import iconTypescript from "../../public/icons/icon_typescript.svg";
-import iconReact from "../../public/icons/icon_react.svg";
-import iconGithub from "../../public/icons/icon_github.svg";
-import iconApi from "../../public/icons/icon_api.svg";
-import iconNext from "../../public/icons/icon_nextjs.svg";
-import Image from "next/image";
-import styles from "./services.module.css";
-import uiInfographic from "../../public/infographics/infographic_ui.svg";
-import frontendInfographic from "../../public/infographics/infographic_frontend.svg";
-import CTAButton from "@/ui/components/CTAButton";
 import internalLinks from "@/consts/internalLinks";
+import CTAButton from "@/ui/components/CTAButton";
+import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
+import TechstackLayout from "@/ui/layouts/TechStackLayout";
+import Image from "next/image";
+import iconApi from "../../public/icons/icon_api.svg";
+import iconExpress from "../../public/icons/icon_express.svg";
+import iconGithub from "../../public/icons/icon_github.svg";
+import iconNext from "../../public/icons/icon_nextjs.svg";
+import iconNode from "../../public/icons/icon_node.svg";
+import iconReact from "../../public/icons/icon_react.svg";
+import iconTypescript from "../../public/icons/icon_typescript.svg";
+import frontendInfographic from "../../public/infographics/infographic_frontend.svg";
+import uiInfographic from "../../public/infographics/infographic_ui.svg";
+import styles from "./services.module.css";
 
 const HeroSection = () => {
   return (
@@ -221,11 +223,22 @@ const OurServices = () => {
   );
 };
 
+const OurTechStack = () => {
+  return (
+    <div className={styles.pagePadding}>
+      <p className={`${styles.pageHeading} h4`}>Our Tech Stack</p>
+      <TechstackLayout />
+    </div>
+  );
+};
+
 function Services() {
   return (
     <div>
       <HeroSection />
       <OurServices />
+      <OurTechStack />
+      <ContactUsLayout />
     </div>
   );
 }
