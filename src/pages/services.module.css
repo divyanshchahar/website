@@ -119,9 +119,20 @@
 /* # OUR SERVICES # */
 /* ################ */
 
-.servicesContainer {
-  padding: var(--spacing-m);
-  background-color: var(--surface-primary-2);
+.ourServicesContainer {
+  padding: var(--spacing-s5);
+
+  p {
+    margin-bottom: var(--spacing-s3);
+  }
+}
+
+.ourServicesFlexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: var(--spacing-s5); */
+  gap: var(--spacing-s4);
+  justify-content: center;
 }
 
 /* ################## */
