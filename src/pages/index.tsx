@@ -11,7 +11,7 @@ import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
-``;
+
 const HeroSection = () => {
   return (
     <div className={styles.herosectionContainer}>
