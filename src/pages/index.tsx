@@ -1,17 +1,17 @@
 import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
 import SdlcLayout from "@/ui/layouts/SdlcLayout";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
 import Image from "next/image";
 import { ReactElement } from "react";
 import heroSectionImage from "../../public/pictures/heroImage.png";
 import iconNode from ".././../public/icons/icon_node.svg";
+import TechCard from "../ui/layouts/TechCard";
 import iconApi from "./../../public/icons/icon_api.svg";
 import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
-import TechCard from "../ui/layouts/TechCard";
-import AccordionPrimitive from "@/ui/primitives/Accordian";
-
+``;
 const HeroSection = () => {
   return (
     <div className={styles.herosectionContainer}>
