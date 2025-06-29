@@ -72,7 +72,7 @@ function TopNavBar() {
         </div>
 
         <div className={styles.buttonContainer}>
-          {status === "authenticated" ? (
+          {/* {status === "authenticated" ? (
             <CTAButton
               buttonText="Dashboard"
               clickHandler={() => router.push("/dashboard")}
@@ -83,7 +83,7 @@ function TopNavBar() {
               version="outline"
               clickHandler={() => signIn("google")}
             />
-          )}
+          )} */}
 
           <a href={internalLinks.contactus} target="blank">
             <CTAButton buttonText="Get a Quote" clickHandler={() => {}} />
