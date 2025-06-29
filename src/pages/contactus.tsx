@@ -1,6 +1,6 @@
 import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
+import PostBookingLayout from "@/ui/layouts/PostBookingLayout";
 import styles from "./contactus.module.css";
-import PostBookingLayout from "@/ui/layouts/PostBookingLAyout";
 
 function ContactUs() {
   return (
