@@ -1,5 +1,5 @@
-import internalLinks from "@/consts/internalLinks";
-import CTAButton from "@/ui/components/CTAButton";
+import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
+import SdlcLayout from "@/ui/layouts/SdlcLayout";
 import Image from "next/image";
 import { ReactElement } from "react";
 import heroSectionImage from "../../public/pictures/heroImage.png";
@@ -9,8 +9,7 @@ import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
-import SdlcLayout from "@/ui/layouts/SdlcLayout";
-import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
+import TechCard from "../ui/layouts/TechCard";
 
 const HeroSection = () => {
   return (
@@ -34,92 +33,9 @@ interface TechCardProps {
   descriptionText: ReactElement;
 }
 
-type ServiceSectionProps = TechCardProps[];
+type ServiceSectionProps = { techCards: TechCardProps[] };
 
-const accordianProps = [
-  {
-    triggerText: "Quality",
-    itemValue: "Quality",
-    contentBody: (
-      <div>
-        Over the years we have learnt a lot form our mistakes and have set up
-        very{" "}
-        <span className={styles.higlightedText}>
-          rigorous and elaborate standard operating procedures
-        </span>{" "}
-        to ensure the{" "}
-        <span className={styles.higlightedText}>
-          highest standards of quality
-        </span>
-      </div>
-    ),
-  },
-  {
-    triggerText: "Commitment",
-    itemValue: "Commitment",
-    contentBody: (
-      <div>
-        At Leondevs{" "}
-        <span className={styles.higlightedText}>
-          a promise made is a promise kept
-        </span>
-        . We deliver on all the points mentioned in the agreement.
-      </div>
-    ),
-  },
-  {
-    triggerText: "Transparency",
-    itemValue: "Transparency",
-    contentBody: (
-      <div>
-        We operate with{" "}
-        <span className={styles.higlightedText}>100% transparency</span>. To
-        avoid any confusions we make an agreement listing all the requirements
-        and the expected time line of delivery
-      </div>
-    ),
-  },
-];
-
-const TechCard = ({ titleText, descriptionText }: TechCardProps) => {
-  return (
-    <div className={`${styles.techCardContainer} greyShadow`}>
-      <p className="h4">{titleText}</p>
-
-      {descriptionText}
-
-      <a href={internalLinks.contactus} className="pointerOnHover">
-        <CTAButton
-          buttonText="Get a Quote"
-          addedStyle={styles.techCardCtaButton}
-          clickHandler={() => {}}
-        />
-      </a>
-    </div>
-  );
-};
-
-const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
-  return (
-    <div className={styles.serviceSectionContainer}>
-      <h1 className="h4">Our Services</h1>
-
-      <div className={styles.serviceSectionCardContainer}>
-        {techCards.map((techCardItem, i) => {
-          return (
-            <TechCard
-              key={i}
-              titleText={techCardItem.titleText}
-              descriptionText={techCardItem.descriptionText}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const techCards: ServiceSectionProps = [
+const serviceSectionProps = [
   {
     titleText: "Frontend Solution",
     descriptionText: (
@@ -173,11 +89,33 @@ const techCards: ServiceSectionProps = [
   },
 ];
 
+const ServiceSection = ({ techCards }: ServiceSectionProps) => {
+  return (
+    <div className={styles.serviceSectionContainer}>
+      <h1 className="h4">Our Services</h1>
+
+      <div className={styles.serviceSectionCardContainer}>
+        {techCards.map((techCardItem, i) => {
+          return (
+            <TechCard
+              key={i}
+              titleText={techCardItem.titleText}
+              descriptionText={techCardItem.descriptionText}
+              version="text"
+              techImages={undefined}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServiceSection techCards={techCards} />
+      <ServiceSection techCards={serviceSectionProps} />
       <SdlcLayout />
       <ContactUsLayout />
     </>
