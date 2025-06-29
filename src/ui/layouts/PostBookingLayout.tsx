@@ -10,7 +10,7 @@ function PostBookingLayout() {
         <div className={styles.stageContainer}>
           <p className="h5">1. Initial discovery meeting</p>
           <p>
-            We'll meet to introduce you to our team and discuss what you are
+            We will meet to introduce you to our team and discuss what you are
             aiming to achieve.
           </p>
         </div>
@@ -30,7 +30,7 @@ function PostBookingLayout() {
         <div className={styles.stageContainer}>
           <p className="h5">3. Proposal Workshop</p>
           <p>
-            We'll present you the proposal that covers your vision, our
+            We will present you the proposal that covers your vision, our
             approach, the roadmap, and budget.
           </p>
         </div>
