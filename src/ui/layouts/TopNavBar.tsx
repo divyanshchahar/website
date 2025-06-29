@@ -1,4 +1,3 @@
-import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { DropdownMenu } from "radix-ui";
@@ -48,9 +47,9 @@ function MyDropDownMenu() {
 }
 
 function TopNavBar() {
-  const { data, status } = useSession();
+  // const { data, status } = useSession();
 
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <header>
