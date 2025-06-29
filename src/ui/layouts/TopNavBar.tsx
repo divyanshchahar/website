@@ -1,14 +1,12 @@
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { DropdownMenu } from "radix-ui";
+import hamburgerMenu from "../../../public/icons/icon_hamburger_menu.svg";
+import companyLogo from "../../../public/icons/leondevs_logo.svg";
+import internalLinks from "../../consts/internalLinks";
 import CTAButton from "../components/CTAButton";
 import NavLink from "../components/NavLink";
-import Image from "next/image";
-import internalLinks from "../../consts/internalLinks";
-import companyLogo from "../../../public/icons/leondevs_logo.svg";
-import hamburgerMenu from "../../../public/icons/icon_hamburger_menu.svg";
 import styles from "./TopNavBar.module.css";
-import { DropdownMenu } from "radix-ui";
-import Button from "../components/Button";
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 
 function MyDropDownMenu() {
   const router = useRouter();
@@ -49,14 +47,14 @@ function MyDropDownMenu() {
 }
 
 function TopNavBar() {
-  const { data, status } = useSession();
+  // const { data, status } = useSession();
 
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <header>
-      <div className={styles.container1}>
-        <div className={styles.container2}>
+      <div className={styles.container}>
+        <div className={styles.dropDownMenuContainer}>
           <MyDropDownMenu />
           <a href={"/"}>
             <Image src={companyLogo} height={32} alt="company logo" />
@@ -72,21 +70,24 @@ function TopNavBar() {
           />
         </div>
 
-        {status === "authenticated" ? (
-          <Button
-            buttonText="Dashboard"
-            clickHandler={() => router.push("/dashboard")}
-          />
-        ) : (
-          <Button
-            buttonText="Join Referral Program"
-            clickHandler={() => signIn("google")}
-          />
-        )}
+        <div className={styles.buttonContainer}>
+          {/* {status === "authenticated" ? (
+            <CTAButton
+              buttonText="Dashboard"
+              clickHandler={() => router.push("/dashboard")}
+            />
+          ) : (
+            <CTAButton
+              buttonText="Join Referral Program"
+              version="outline"
+              clickHandler={() => signIn("google")}
+            />
+          )} */}
 
-        <a href={internalLinks.contactus} target="blank">
-          <CTAButton buttonText="Get a Quote" />
-        </a>
+          <a href={internalLinks.contactus} target="blank">
+            <CTAButton buttonText="Get a Quote" clickHandler={() => {}} />
+          </a>
+        </div>
       </div>
     </header>
   );

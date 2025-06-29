@@ -3,34 +3,40 @@
 /* ################ */
 
 .herosectionContainer {
-  background-color: var(--surface-primary-1);
-  padding: var(--spacing-l);
-  position: relative;
-  min-height: 300px;
-  margin-top: var(--spacing-top-offset);
-  z-index: -1;
+  background: linear-gradient(
+    0deg,
+    var(--color-branding) -0.14%,
+    var(--color-secondry) 99.94%
+  );
+  padding: var(--spacing-s3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s2);
+  margin-top: var(--spacing-topOffset);
+  align-items: center;
 }
 
 .heroSectionImageContainer {
-  margin: auto;
-  max-width: 1024px;
+  max-width: 100%;
 }
 
 .herosectionContainer p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   text-align: center;
-  translate: -50% -50%;
+  color: var(--color-primary);
 }
 
 .strikeThrough {
   text-decoration: line-through;
 }
 
-@media screen and (min-width: 551px) {
-  .herosectionContainer p {
-    top: 50%;
+@media screen and (min-width: 480px) {
+  .herosectionContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .heroSectionImageContainer {
+    max-width: 50%;
   }
 }
 
@@ -39,28 +45,14 @@
 /* ############# */
 
 .techCardContainer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--surface-primary-1);
-  padding: var(--spacing-m);
-  margin: var(--spacing-m);
+  padding: var(--spacing-s3);
+  gap: var(--spacing-s2);
   max-width: 350px;
   border-radius: var(--radius-s);
-}
-
-.techCardContainer p {
-  margin-top: var(--spacing-m);
-}
-
-.techCardImageContainer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--spacing-m);
-  justify-content: space-between;
-}
-
-.techCardIcon {
-  height: var(--icon-height);
-  width: auto;
-  margin: var(--spacing-s);
+  justify-content: space-around;
 }
 
 .techCardCtaButton {
@@ -73,53 +65,18 @@
 /* ################### */
 
 .serviceSectionContainer {
-  background-color: var(--surface-primary-2);
-  padding: var(--spacing-m);
+  padding: var(--spacing-s5);
+}
+
+.sectionHeading {
+  margin-bottom: var(--spacing-s4);
 }
 
 .serviceSectionCardContainer {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-
+  gap: var(--spacing-s4);
   justify-content: center;
-  max-width: 1024px;
-}
-
-@media screen and (min-width: 900px) {
-  .serviceSectionCardContainer {
-    justify-content: start;
-  }
-}
-
-/* ################# */
-/* # WHY CHOOSE US # */
-/* ################# */
-
-.whatWeOfferContainer {
-  background-color: var(--surface-primary-1);
-  padding: var(--spacing-m);
-}
-
-.whatWeOfferMediaContainer {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: var(--surface-primary-1);
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-m);
-  max-width: 1024px;
-  margin: auto;
-  margin-top: var(--spacing-m);
-  margin-bottom: var(--spacing-m);
-}
-.higlightedText {
-  color: var(--typography-branding);
-  font-weight: 750;
-}
-
-.whatWeOfferInnerContainer {
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
+  margin-top: var(--spacing-s4);
 }

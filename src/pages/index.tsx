@@ -1,37 +1,30 @@
-import Image, { StaticImageData } from "next/image";
-import heroSectionImage from "../../public/pictures/heroImage.png";
-import styles from "./Index.module.css";
+import ContactUsLayout from "@/ui/layouts/ContactUsLayout";
+import SdlcLayout from "@/ui/layouts/SdlcLayout";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
+import Image from "next/image";
 import { ReactElement } from "react";
+import heroSectionImage from "../../public/pictures/heroImage.png";
+import iconNode from ".././../public/icons/icon_node.svg";
+import TechCard from "../ui/layouts/TechCard";
 import iconApi from "./../../public/icons/icon_api.svg";
+import iconExpress from "./../../public/icons/icon_express.svg";
 import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
-import iconExpress from "./../../public/icons/icon_express.svg";
-import iconNode from ".././../public/icons/icon_node.svg";
-import CTAButton from "@/ui/components/CTAButton";
-import AccordionPrimitive from "@/ui/primitives/Accordian";
-import iconPeace from "../../public/icons/icon_peace.svg";
-import internalLinks from "@/consts/internalLinks";
+import styles from "./Index.module.css";
 
 const HeroSection = () => {
   return (
     <div className={styles.herosectionContainer}>
-      <div
-        style={{
-          maxWidth: "1024px",
-          margin: "auto",
-        }}
-      >
+      <div>
+        <p className="h1">One Web App for all screens</p>
+      </div>
+      <div className={styles.heroSectionImageContainer}>
         <Image
           src={heroSectionImage}
           alt="hero section"
           style={{ width: "100%", height: "auto" }}
         />
       </div>
-
-      <p className="h1">
-        We <span className={styles.strikeThrough}>make web apps</span> empower
-        business with technology
-      </p>
     </div>
   );
 };
@@ -39,139 +32,11 @@ const HeroSection = () => {
 interface TechCardProps {
   titleText: string;
   descriptionText: ReactElement;
-  imageArrary: {
-    techImage: StaticImageData;
-    techName: string;
-  }[];
 }
 
-type ServiceSectionProps = TechCardProps[];
+type ServiceSectionProps = { techCards: TechCardProps[] };
 
-const accordianProps = [
-  {
-    triggerText: "Quality",
-    itemValue: "Quality",
-    contentBody: (
-      <div>
-        Over the years we have learnt a lot form our mistakes and have set up
-        very{" "}
-        <span className={styles.higlightedText}>
-          rigorous and elaborate standard operating procedures
-        </span>{" "}
-        to ensure the{" "}
-        <span className={styles.higlightedText}>
-          highest standards of quality
-        </span>
-      </div>
-    ),
-  },
-  {
-    triggerText: "Commitment",
-    itemValue: "Commitment",
-    contentBody: (
-      <div>
-        At Leondevs{" "}
-        <span className={styles.higlightedText}>
-          a promise made is a promise kept
-        </span>
-        . We deliver on all the points mentioned in the agreement.
-      </div>
-    ),
-  },
-  {
-    triggerText: "Transparency",
-    itemValue: "Transparency",
-    contentBody: (
-      <div>
-        We operate with{" "}
-        <span className={styles.higlightedText}>100% transparency</span>. To
-        avoid any confusions we make an agreement listing all the requirements
-        and the expected time line of delivery
-      </div>
-    ),
-  },
-];
-
-const TechCard = ({
-  titleText,
-  descriptionText,
-  imageArrary,
-}: TechCardProps) => {
-  return (
-    <div className={styles.techCardContainer}>
-      <p className="h4">{titleText}</p>
-
-      {descriptionText}
-
-      <div className={styles.techCardImageContainer}>
-        {imageArrary.map((item, i) => {
-          return (
-            <div key={i}>
-              <Image
-                src={item.techImage}
-                alt={item.techName}
-                className={styles.techCardIcon}
-              />
-            </div>
-          );
-        })}
-      </div>
-
-      <a href={internalLinks.contactus} className="pointerOnHover">
-        <CTAButton
-          buttonText="Get a Quote"
-          addedStyle={styles.techCardCtaButton}
-        />
-      </a>
-    </div>
-  );
-};
-
-const ServiceSection = ({ techCards }: { techCards: ServiceSectionProps }) => {
-  return (
-    <div className={styles.serviceSectionContainer}>
-      <h1 className="h1">Our Services</h1>
-
-      <div className={styles.serviceSectionCardContainer}>
-        {techCards.map((techCardItem, i) => {
-          return (
-            <TechCard
-              key={i}
-              titleText={techCardItem.titleText}
-              descriptionText={techCardItem.descriptionText}
-              imageArrary={techCardItem.imageArrary}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const WhatWeOffer = () => {
-  return (
-    <div className={styles.whatWeOfferContainer}>
-      <h1 className="h3">What we Offer</h1>
-
-      <div className={styles.whatWeOfferMediaContainer}>
-        <div>
-          <div className={styles.whatWeOfferInnerContainer}>
-            <Image
-              src={iconPeace}
-              alt="api"
-              style={{ width: "100%", height: "auto" }}
-            />
-            <h2 className={`h5 ${styles.higlightedText}`}>Peace of Mind</h2>
-          </div>
-        </div>
-
-        <AccordionPrimitive items={accordianProps} />
-      </div>
-    </div>
-  );
-};
-
-const techCards: ServiceSectionProps = [
+const serviceSectionProps = [
   {
     titleText: "Frontend Solution",
     descriptionText: (
@@ -225,12 +90,106 @@ const techCards: ServiceSectionProps = [
   },
 ];
 
+const accordianProps = [
+  {
+    triggerText: "Fast-paced development",
+    itemValue: "value 1",
+    contentBody: (
+      <p>
+        We try to leverage as much prepared boilerplates and UI components as
+        possible to reduce time to market and reach the MVP as quickly as
+        possible
+      </p>
+    ),
+  },
+  {
+    triggerText: "Leading Technology",
+    itemValue: "value 2",
+    contentBody: (
+      <p>
+        We use only proven and popular technologies which are supported by large
+        community of developers. If you decide to take the project in house or
+        change the development team the transition will be smooth.
+      </p>
+    ),
+  },
+  {
+    triggerText: "Business Mindset",
+    itemValue: "value 3",
+    contentBody: (
+      <p>
+        We work closely with our clients to understand business goals through
+        the lens of technical feasibility. This makes sure that product
+        development stays lean and commercially viable
+      </p>
+    ),
+  },
+  {
+    triggerText: "Consistent Communication",
+    itemValue: "value 4",
+    contentBody: (
+      <p>
+        We kick off every project by setting up a effective mechanism of
+        communication for essential information like deliverables, roadblocks
+        and deadlines. All projects are run on clear schedules, have living
+        documentation, accurate road maps and routine reports shared with every
+        stake holder
+      </p>
+    ),
+  },
+  {
+    triggerText: "Top Level Talent",
+    itemValue: "value 5",
+    contentBody: (
+      <p>
+        Every developer, content creator, UI/UX developer, DevOps engineer and
+        every one who is responsible for bringing your product to life is
+        thoroughly evaluated for their skillset via a very rigorous and
+        exhausting selection process
+      </p>
+    ),
+  },
+];
+
+const ServiceSection = ({ techCards }: ServiceSectionProps) => {
+  return (
+    <div className={styles.serviceSectionContainer}>
+      <h1 className="h4">Our Services</h1>
+
+      <div className={styles.serviceSectionCardContainer}>
+        {techCards.map((techCardItem, i) => {
+          return (
+            <TechCard
+              key={i}
+              titleText={techCardItem.titleText}
+              descriptionText={techCardItem.descriptionText}
+              version="text"
+              techImages={undefined}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const WhyWorkWithUS = () => {
+  return (
+    <div className={styles.serviceSectionContainer}>
+      <p className={`${styles.sectionHeading} h4`}>Why work with us</p>
+      <AccordionPrimitive items={accordianProps} />
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <ServiceSection techCards={techCards} />
-      <WhatWeOffer />
+      <ServiceSection techCards={serviceSectionProps} />
+      <SdlcLayout />
+      <WhyWorkWithUS />
+      <ContactUsLayout />
     </>
   );
 }

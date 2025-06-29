@@ -1,6 +1,6 @@
-.container1 {
-  padding: var(--spacing-m);
-  background-color: var(--surface-secondry);
+.container {
+  padding: var(--spacing-s3);
+  background-color: var(--color-secondry);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,11 +15,16 @@
   display: none;
 }
 
-.container2 {
+.dropDownMenuContainer {
   display: flex;
-  gap: var(--spacing-m);
+  gap: var(--spacing-s1);
   justify-content: space-between;
   align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: var(--spacing-s1);
 }
 
 .iconButton {
@@ -31,7 +36,10 @@
 @media screen and (min-width: 990px) {
   .links {
     display: flex;
-    gap: var(--spacing-m);
+    gap: var(--spacing-s2);
+    & a {
+      color: var(--color-primary);
+    }
   }
 
   .iconButton {
@@ -47,14 +55,15 @@
   width: 100vw;
   border: 1px solid white;
   border-radius: var(--radius-s);
-  padding: var(--spacing-m);
-  background-color: var(--surface-secondry);
-  margin-top: 20px;
+  padding: var(--spacing-s2);
+  background-color: var(--color-secondry);
+  margin-top: 18px;
+  color: var(--color-primary);
 }
 
 .seprator {
   height: 1px;
-  background-color: white;
-  margin-top: var(--spacing-s);
-  margin-bottom: var(--spacing-s);
+  background-color: var(--color-primary);
+  margin-top: var(--spacing-s1);
+  margin-bottom: var(--spacing-s1);
 }

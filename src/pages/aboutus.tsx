@@ -1,14 +1,11 @@
-import Image, { StaticImageData } from "next/image";
-import styles from "./aboutus.module.css";
-import iconTransparency from "../../public/icons/icon_agreement.svg";
-import iconCommitment from "../../public/icons/icon_commitment.svg";
-import iconDelight from "../../public/icons/icon_satisfaction.svg";
-import iconQuality from "../../public/icons/icon_quality.svg";
-import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
-import CTAButton from "@/ui/components/CTAButton";
-import iconMeeting from "../../public/icons/icon_meeting.svg";
-import { ReactElement } from "react";
 import internalLinks from "@/consts/internalLinks";
+import CTAButton from "@/ui/components/CTAButton";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
+import Image, { StaticImageData } from "next/image";
+import { ReactElement } from "react";
+import iconMeeting from "../../public/icons/icon_meeting.svg";
+import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
+import styles from "./aboutus.module.css";
 
 export interface ReasonCardProps {
   reasonImage: StaticImageData;
@@ -16,53 +13,69 @@ export interface ReasonCardProps {
   reasonBody: ReactElement;
 }
 
-export interface OurValuesProps {
-  reasons: {
-    reasonImage: StaticImageData;
-    reasonHeading: string;
-    reasonBody: ReactElement;
-  }[];
-}
+const ourValuesProps = [
+  {
+    triggerText: "Strive to be the best",
+    itemValue: "value 1",
+    contentBody: (
+      <p>
+        We posses an endless drive to be the best. We do the maximum we can to
+        achieve successful results and try to exceed expectations. We are over
+        achievers striving to go above and betyond
+      </p>
+    ),
+  },
+  {
+    triggerText: "Focus on outcome over outputs",
+    itemValue: "value 2",
+    contentBody: (
+      <p>
+        We always keep the boarder vision in sight and focus on initiatives with
+        highest impact. Our strategic, analytical and business mindset allows us
+        to priritize our focus on what truly matters
+      </p>
+    ),
+  },
+  {
+    triggerText: "Just be honest",
+    itemValue: "value 3",
+    contentBody: (
+      <p>
+        We are honest with all our interactions, weather with ourselves, our
+        teammates, our clients, or our partners. We are open to improvements and
+        view constructive feedback as an opportunity for mutual growth.
+      </p>
+    ),
+  },
+  {
+    triggerText: "Be kind and compassionate",
+    itemValue: "value 4",
+    contentBody: (
+      <p>
+        We are grounded in humility, caring about well-being and success of
+        others. We actively engaged in supporting our peers, helping them
+        overcome challenges both professionally and personally
+      </p>
+    ),
+  },
+  {
+    triggerText: "Overcome adversity with positivity",
+    itemValue: "value 5",
+    contentBody: (
+      <p>
+        Our experiance gives us perspective, nad we understand that its the
+        journey not the destination. We are confident in our capabilities and
+        maintian positivity during tough times
+      </p>
+    ),
+  },
+];
 
-const ReasonCard = ({
-  reasonImage,
-  reasonHeading,
-  reasonBody,
-}: ReasonCardProps) => {
-  return (
-    <div className={styles.reasonContainer}>
-      <div style={{ width: "100%" }}>
-        <Image
-          src={reasonImage}
-          alt={reasonHeading}
-          style={{ width: "100%", height: "auto" }}
-        />
-      </div>
-
-      <h2 className={`h4 ${styles.reasonHeading}`}>{reasonHeading}</h2>
-
-      {reasonBody}
-    </div>
-  );
-};
-
-const OurValues = ({ reasons }: OurValuesProps) => {
+const OurValues = () => {
   return (
     <div className={styles.valuesContainer}>
-      <h1 className="h4">Our Values</h1>
-      <br />
-      <div className={styles.reasons}>
-        {reasons.map((reason, i) => {
-          return (
-            <ReasonCard
-              key={i}
-              reasonImage={reason.reasonImage}
-              reasonHeading={reason.reasonHeading}
-              reasonBody={reason.reasonBody}
-            />
-          );
-        })}
-      </div>
+      <p className={`${styles.sectionHeading} h4`}>Our Core Values</p>
+      <AccordionPrimitive items={ourValuesProps} />
     </div>
   );
 };
@@ -115,6 +128,7 @@ const DirectorsInfo = () => {
               buttonIcon={iconMeeting}
               buttonIconName="calendar"
               addedStyle={styles.ctaButton}
+              clickHandler={() => {}}
             />
           </a>
         </div>
@@ -123,66 +137,10 @@ const DirectorsInfo = () => {
   );
 };
 
-const reasons = [
-  {
-    reasonImage: iconTransparency,
-    reasonHeading: "Transparency",
-    reasonBody: (
-      <p>
-        We operate with{" "}
-        <span className={styles.highlightedText}>100% transparency</span>. To
-        avoid any confusions we make an agreement listing all the requirements
-        and the expected time line of delivery
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconCommitment,
-    reasonHeading: "Commitment",
-    reasonBody: (
-      <p>
-        At Leondevs{" "}
-        <span className={styles.highlightedText}>
-          a promise made is a promise kept
-        </span>
-        . We deliver on all the points mentioned in the agreement.
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconDelight,
-    reasonHeading: "Customer Delight",
-    reasonBody: (
-      <p>
-        <span className={styles.highlightedText}>Customer is king</span>, in
-        matters of choice. A motto we live by, we strive to deliver the best
-        customer experiance humanly possible
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconQuality,
-    reasonHeading: "Quality",
-    reasonBody: (
-      <p>
-        Over the years we have learnt a lot form our mistakes and have set up
-        very{" "}
-        <span className={styles.highlightedText}>
-          rigorous and elaborate standard operating procedures
-        </span>{" "}
-        to ensure the{" "}
-        <span className={styles.highlightedText}>
-          highest standards of quality
-        </span>
-      </p>
-    ),
-  },
-];
-
 function AboutUs() {
   return (
     <>
-      <OurValues reasons={reasons} />
+      <OurValues />
       <DirectorsInfo />
     </>
   );

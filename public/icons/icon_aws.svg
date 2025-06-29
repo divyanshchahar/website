@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none"
+   version="1.1"
+   id="svg2"
+   sodipodi:docname="aws.svg"
+   inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="namedview2"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="8.4004406"
+     inkscape:cx="19.582306"
+     inkscape:cy="21.844092"
+     inkscape:window-width="2560"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="59"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g2"
+     transform="translate(-0.14819344,-4.234159)">
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 14.613562,12.057922 c -1.750787,1.279912 -4.294433,1.959412 -6.4815235,1.959412 -3.0651378,0 -5.8269601,-1.121915 -7.91296241,-2.986541 -0.16496462,-0.147511 -0.0159644,-0.347629 0.1809282,-0.231752 2.25628591,1.295729 5.03939621,2.08056 7.91831111,2.08056 1.9422756,0 4.0762216,-0.400294 6.0398276,-1.221973 0.292626,-0.131694 0.542773,0.189572 0.255419,0.400294 z"
+       fill="#ff9900"
+       id="path1"
+       style="stroke-width:0.599154" />
+    <path
+       fill-rule="evenodd"
+       clip-rule="evenodd"
+       d="m 15.342552,11.236243 c -0.223484,-0.284478 -1.47931,-0.136967 -2.048746,-0.06848 -0.170279,0.02103 -0.196881,-0.126422 -0.04254,-0.237025 1.000406,-0.695318 2.644723,-0.495141 2.836333,-0.263388 0.191549,0.237025 -0.05326,1.864625 -0.989802,2.644184 -0.143677,0.121149 -0.282022,0.05794 -0.218212,-0.100058 0.212879,-0.521504 0.68651,-1.696084 0.462966,-1.97523 z"
+       fill="#ff9900"
+       id="path2"
+       style="stroke-width:0.599154" />
+  </g>
+</svg>

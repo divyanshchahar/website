@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 export interface ButtonProps {
   buttonText: string;
   addedStyles?: string;
-  clickHandler?: () => {};
+  clickHandler?: () => void;
 }
 
 function Button({ buttonText, addedStyles, clickHandler }: ButtonProps) {

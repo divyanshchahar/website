@@ -1,10 +1,19 @@
 .button {
-  padding: var(--spacing-s);
-  background-color: var(--surface-cta);
+  padding: var(--spacing-s1);
   border-radius: var(--radius-s);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.outline {
+  border: 1px solid var(--color-branding);
+  color: var(--color-branding);
+}
+
+.solid {
+  background-color: var(--color-branding);
+  color: var(--color-primary);
 }
 
 .button:hover {

@@ -20,7 +20,3 @@
   margin-top: var(--spacing-s2);
   margin-bottom: var(--spacing-s2);
 }
-
-.pageContainer {
-  margin-top: var(--spacing-topOffset);
-}

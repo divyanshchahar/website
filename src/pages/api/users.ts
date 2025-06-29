@@ -25,7 +25,8 @@ export default async function handler(
 
           refCode.assignedTo = user._id.toString();
 
-          const updatedRefCode = await refCode.save();
+          // const updatedRefCode = await refCode.save();
+          await refCode.save();
 
           return res.status(201).json({ ...user });
         }

@@ -1,0 +1,27 @@
+.techCardContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-primary-1);
+  padding: var(--spacing-s3);
+  gap: var(--spacing-s2);
+  max-width: 350px;
+  border-radius: var(--radius-s);
+  justify-content: space-around;
+}
+
+.techCardCtaButton {
+  width: 100%;
+  margin-top: var(--spacing-m);
+}
+
+.techImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s1);
+  justify-content: space-between;
+}
+
+.techImage {
+  height: 32px;
+  width: auto;
+}
