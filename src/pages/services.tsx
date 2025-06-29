@@ -294,9 +294,10 @@ const OurServices = () => {
       <p className="h4">Our Services</p>
 
       <div className={styles.ourServicesFlexContainer}>
-        {ourServicesProps.map((item) => {
+        {ourServicesProps.map((item, index) => {
           return (
             <TechCard
+              key={index}
               titleText={item.titleText}
               descriptionText={item.descriptionText}
               version="image"
