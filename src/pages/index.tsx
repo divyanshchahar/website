@@ -10,6 +10,7 @@ import iconNext from "./../../public/icons/icon_nextjs.svg";
 import iconReact from "./../../public/icons/icon_react.svg";
 import styles from "./Index.module.css";
 import TechCard from "../ui/layouts/TechCard";
+import AccordionPrimitive from "@/ui/primitives/Accordian";
 
 const HeroSection = () => {
   return (
@@ -89,6 +90,67 @@ const serviceSectionProps = [
   },
 ];
 
+const accordianProps = [
+  {
+    triggerText: "Fast-paced development",
+    itemValue: "value 1",
+    contentBody: (
+      <p>
+        We try to leverage as much prepared boilerplates and UI components as
+        possible to reduce time to market and reach the MVP as quickly as
+        possible
+      </p>
+    ),
+  },
+  {
+    triggerText: "Leading Technology",
+    itemValue: "value 2",
+    contentBody: (
+      <p>
+        We use only proven and popular technologies which are supported by large
+        community of developers. If you decide to take the project in house or
+        change the development team the transition will be smooth.
+      </p>
+    ),
+  },
+  {
+    triggerText: "Business Mindset",
+    itemValue: "value 3",
+    contentBody: (
+      <p>
+        We work closely with our clients to understand business goals through
+        the lens of technical feasibility. This makes sure that product
+        development stays lean and commercially viable
+      </p>
+    ),
+  },
+  {
+    triggerText: "Consistent Communication",
+    itemValue: "value 4",
+    contentBody: (
+      <p>
+        We kick off every project by setting up a effective mechanism of
+        communication for essential information like deliverables, roadblocks
+        and deadlines. All projects are run on clear schedules, have living
+        documentation, accurate road maps and routine reports shared with every
+        stake holder
+      </p>
+    ),
+  },
+  {
+    triggerText: "Top Level Talent",
+    itemValue: "value 5",
+    contentBody: (
+      <p>
+        Every developer, content creator, UI/UX developer, DevOps engineer and
+        every one who is responsible for bringing your product to life is
+        thoroughly evaluated for their skillset via a very rigorous and
+        exhausting selection process
+      </p>
+    ),
+  },
+];
+
 const ServiceSection = ({ techCards }: ServiceSectionProps) => {
   return (
     <div className={styles.serviceSectionContainer}>
@@ -111,12 +173,22 @@ const ServiceSection = ({ techCards }: ServiceSectionProps) => {
   );
 };
 
+const WhyWorkWithUS = () => {
+  return (
+    <div className={styles.serviceSectionContainer}>
+      <p className={`${styles.sectionHeading} h4`}>Why work with us</p>
+      <AccordionPrimitive items={accordianProps} />
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <>
       <HeroSection />
       <ServiceSection techCards={serviceSectionProps} />
       <SdlcLayout />
+      <WhyWorkWithUS />
       <ContactUsLayout />
     </>
   );
