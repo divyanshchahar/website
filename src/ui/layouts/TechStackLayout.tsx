@@ -54,11 +54,12 @@ const TechCard = ({ heading, techArray }: TechCardTypes) => {
   return (
     <div className={styles.techCardContainer}>
       <p className={styles.subHeading}>{heading}</p>
-      {techArray.map((tech) => (
+      {techArray.map((tech, index) => (
         <Tech
           techName={tech.techName}
           techIcon={tech.techIcon}
           altString={tech.altString}
+          key={index}
         />
       ))}
     </div>
@@ -73,9 +74,10 @@ const FiledGroup = ({ heading, techCards }: FieldGroupTypes) => {
       </div>
 
       <div className={styles.fieldFlexContainer}>
-        {techCards.map((techCard) => {
+        {techCards.map((techCard, index) => {
           return (
             <TechCard
+              key={index}
               heading={techCard.heading}
               techArray={techCard.techArray}
             />
