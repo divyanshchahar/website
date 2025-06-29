@@ -3,11 +3,7 @@ import CTAButton from "@/ui/components/CTAButton";
 import AccordionPrimitive from "@/ui/primitives/Accordian";
 import Image, { StaticImageData } from "next/image";
 import { ReactElement } from "react";
-import iconTransparency from "../../public/icons/icon_agreement.svg";
-import iconCommitment from "../../public/icons/icon_commitment.svg";
 import iconMeeting from "../../public/icons/icon_meeting.svg";
-import iconQuality from "../../public/icons/icon_quality.svg";
-import iconDelight from "../../public/icons/icon_satisfaction.svg";
 import directorPhoto from "../../public/pictures/directorPhoto.jpeg";
 import styles from "./aboutus.module.css";
 
@@ -132,6 +128,7 @@ const DirectorsInfo = () => {
               buttonIcon={iconMeeting}
               buttonIconName="calendar"
               addedStyle={styles.ctaButton}
+              clickHandler={() => {}}
             />
           </a>
         </div>
@@ -139,62 +136,6 @@ const DirectorsInfo = () => {
     </div>
   );
 };
-
-const reasons = [
-  {
-    reasonImage: iconTransparency,
-    reasonHeading: "Transparency",
-    reasonBody: (
-      <p>
-        We operate with{" "}
-        <span className={styles.highlightedText}>100% transparency</span>. To
-        avoid any confusions we make an agreement listing all the requirements
-        and the expected time line of delivery
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconCommitment,
-    reasonHeading: "Commitment",
-    reasonBody: (
-      <p>
-        At Leondevs{" "}
-        <span className={styles.highlightedText}>
-          a promise made is a promise kept
-        </span>
-        . We deliver on all the points mentioned in the agreement.
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconDelight,
-    reasonHeading: "Customer Delight",
-    reasonBody: (
-      <p>
-        <span className={styles.highlightedText}>Customer is king</span>, in
-        matters of choice. A motto we live by, we strive to deliver the best
-        customer experiance humanly possible
-      </p>
-    ),
-  },
-  {
-    reasonImage: iconQuality,
-    reasonHeading: "Quality",
-    reasonBody: (
-      <p>
-        Over the years we have learnt a lot form our mistakes and have set up
-        very{" "}
-        <span className={styles.highlightedText}>
-          rigorous and elaborate standard operating procedures
-        </span>{" "}
-        to ensure the{" "}
-        <span className={styles.highlightedText}>
-          highest standards of quality
-        </span>
-      </p>
-    ),
-  },
-];
 
 function AboutUs() {
   return (
