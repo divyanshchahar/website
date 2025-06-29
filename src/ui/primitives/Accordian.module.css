@@ -1,8 +1,10 @@
 .root {
   border-radius: var(--radius-m);
-  border: 1px solid var(--typography-primary);
+  border: 1px solid var(--color-branding);
   max-width: 500px;
   width: 100%;
+  margin: auto;
+  box-shadow: 4px 4px 8px 0px var(--color-branding);
 }
 
 .item {
@@ -10,10 +12,9 @@
 }
 
 .header {
-  padding: var(--spacing-s);
-  background-color: var(--surface-secondry);
-  border-top: 1px solid var(--typography-primary);
-  border-bottom: 1px solid var(--typography-primary);
+  padding: var(--spacing-s1);
+  border-top: 1px solid var(--color-branding);
+  border-bottom: 1px solid var(--color-branding);
 }
 
 .roundedTop {
@@ -29,7 +30,7 @@
   &[data-state="open"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    border-bottom: 1px solid var(--typography-primary);
+    border-bottom: 1px solid var(--color-branding);
   }
 }
 
@@ -38,7 +39,7 @@
 }
 
 .content {
-  padding: var(--spacing-s);
+  padding: var(--spacing-s1);
   font-size: 1rem;
   background-color: transparent;
 }
