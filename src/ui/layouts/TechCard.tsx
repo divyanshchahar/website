@@ -42,9 +42,10 @@ function TechCard({
           <hr />
 
           <div className={styles.techImageContainer}>
-            {techImages.map((techImage) => {
+            {techImages.map((techImage, index) => {
               return (
                 <Image
+                  key={index}
                   src={techImage.techImage}
                   alt={techImage.altString}
                   className={styles.techImage}
