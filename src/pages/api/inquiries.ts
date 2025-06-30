@@ -1,25 +1,22 @@
-// import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 // import mongoDbConnect from "@/lib/dbConnect";
 // import db from "../../consts/db";
+import Inquiries from "@/models/Inquiries";
+import dbConnect from "@/lib/dbConnect";
 
-// type Data = object;
+type Data = object;
 
-// export default async function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse<Data>
-// ) {
-//   try {
-//     const client = await mongoDbConnect;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<Data>
+) {
+  try {
+    await dbConnect();
 
-//     const collection = client
-//       .db(db.dbName)
-//       .collection(db.collections.inquiries);
+    const inquiry = await Inquiries.create({ ...req.body });
 
-//     await collection.insertOne(req.body);
-
-//     res.status(200).json({});
-//   } catch (error) {
-//     console.log(error);
-//     res.status(500).send({});
-//   }
-// }
+    return res.status(201).json({ ...inquiry });
+  } catch (error) {
+    return res.status(500).json({ error });
+  }
+}
