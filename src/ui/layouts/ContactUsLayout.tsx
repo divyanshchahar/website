@@ -1,10 +1,12 @@
 import externalLinks from "@/consts/externalLinks";
 import Button from "@/ui/components/Button";
 import CTAButton from "@/ui/components/CTAButton";
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-// import iconSchedule from "./../../public/icons/icon_meeting.svg";
 import iconSchedule from "../../../public/icons/icon_meeting.svg";
+import AlertDialogDemo from "./AlertDialogPrimitive";
 import styles from "./ContactUsLayout.module.css";
+import AcceptedDialouge from "./AcceptedDialouge";
 
 export type InquiryFormInputs = {
   name: string;
@@ -14,6 +16,27 @@ export type InquiryFormInputs = {
 };
 
 const InquiryForm = () => {
+  interface InquiryType {
+    status: "ready" | "waiting";
+    data: string;
+  }
+
+  const [isAlerted, setIsAlerted] = useState(false);
+  const [isSucess, setIsSucess] = useState(false);
+
+  const [inquiry, setInquiry] = useState<InquiryType>({
+    status: "ready",
+    data: "",
+  });
+
+  const toggleIsAlerted = () => {
+    setIsAlerted(!isAlerted);
+  };
+
+  const toggleIsSucess = () => {
+    setIsSucess(!isSucess);
+  };
+
   const {
     register,
     handleSubmit,
@@ -22,6 +45,8 @@ const InquiryForm = () => {
 
   const onSubmit: SubmitHandler<InquiryFormInputs> = async (data) => {
     try {
+      setInquiry({ data: "", status: "waiting" });
+
       const res = await fetch("/api/inquiries", {
         headers: {
           "Content-Type": "application/json",
@@ -30,9 +55,19 @@ const InquiryForm = () => {
         body: JSON.stringify(data),
       });
 
-      await res.json();
-    } catch (error) {
-      console.log(error);
+      if (!res.ok) {
+        throw new Error(
+          "Sorry something went wrong, your inquiry was not registered with us"
+        );
+      } else {
+        setInquiry({ data: "", status: "ready" });
+        setIsSucess(true);
+      }
+    } catch (e) {
+      if (e instanceof Error) {
+        setInquiry({ ...inquiry, status: "ready", data: e.message });
+        setIsAlerted(true);
+      }
     }
   };
 
@@ -123,8 +158,27 @@ const InquiryForm = () => {
         )}
 
         {/* SUBMIT BUTTON */}
-        <Button buttonText="Send Enquire" />
+        <Button
+          buttonText="Send Enquire"
+          isDisabled={inquiry.status === "waiting"}
+        />
       </form>
+
+      <AlertDialogDemo
+        alertTitle="Unable to register Inquiry"
+        alertDescription="We were unable to register your Inquiry right now please try again"
+        alertCancel="Try Again"
+        alertDialogState={isAlerted}
+        alertDialogeController={toggleIsAlerted}
+      />
+
+      <AcceptedDialouge
+        alertTitle="Inquiry Sent Sucessfully"
+        alertDescription="Congratulations. Your inquiry has been submitted sucessfully"
+        alertCancel="Okay"
+        alertDialogState={isSucess}
+        alertDialogeController={toggleIsSucess}
+      />
     </div>
   );
 };

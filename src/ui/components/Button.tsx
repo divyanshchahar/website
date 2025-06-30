@@ -4,13 +4,20 @@ export interface ButtonProps {
   buttonText: string;
   addedStyles?: string;
   clickHandler?: () => void;
+  isDisabled?: boolean;
 }
 
-function Button({ buttonText, addedStyles, clickHandler }: ButtonProps) {
+function Button({
+  buttonText,
+  addedStyles,
+  clickHandler,
+  isDisabled,
+}: ButtonProps) {
   return (
     <button
       className={`${styles.container} ${addedStyles}`}
       onClick={clickHandler}
+      disabled={isDisabled}
     >
       {buttonText}
     </button>
