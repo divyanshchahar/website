@@ -1,0 +1,42 @@
+.pageContainer {
+  margin-top: var(--spacing-topOffset);
+  padding: var(--spacing-s4);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.sepration {
+  border-width: 2px;
+  border-color: var(--color-secondry);
+}
+
+.ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.insetList1 {
+  list-style-position: inside;
+  margin-left: var(--spacing-s1);
+}
+
+.insetList2 {
+  list-style-position: inside;
+  margin-left: var(--spacing-s2);
+}
+
+.insetList3 {
+  list-style-position: inside;
+  margin-left: var(--spacing-s3);
+}
+
+.insetList4 {
+  list-style-position: inside;
+  margin-left: var(--spacing-s4);
+}
