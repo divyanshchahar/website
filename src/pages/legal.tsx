@@ -1036,10 +1036,10 @@ const TermsOfUse = () => {
             </li>
             <li>
               is grossly harmful, harassing, blasphemous, defamatory, obscene,
-              pornographic, pedophilic, libelous, invasive of another's privacy,
-              hateful, or racially, ethnically objectionable, disparaging,
-              relating or encouraging money laundering or gambling, or otherwise
-              unlawful in any manner whatever;
+              pornographic, pedophilic, libelous, invasive of another{`&apos`}s
+              privacy, hateful, or racially, ethnically objectionable,
+              disparaging, relating or encouraging money laundering or gambling,
+              or otherwise unlawful in any manner whatever;
             </li>
             <li>is in any way harmful to minors;</li>
             <li>
@@ -1063,13 +1063,13 @@ const TermsOfUse = () => {
             <li>
               publish, post, disseminate, any grossly harmful information,
               harassing, blasphemous, defamatory, obscene, pornographic,
-              pedophilic, libelous, invasive of another 's privacy, hateful, or
-              racially, ethnically objectionable, disparaging, relating or
-              encouraging money laundering or gambling, or otherwise unlawful in
-              any manner whatever; or unlawfully threatening or unlawfully
-              harassing including but not limited to {`&quot`}indecent
-              representation of women{`&quot`} within the meaning of the
-              Indecent Representation of Women (Prohibition) Act, 1986; and
+              pedophilic, libelous, invasive of another{`&apos`}s privacy,
+              hateful, or racially, ethnically objectionable, disparaging,
+              relating or encouraging money laundering or gambling, or otherwise
+              unlawful in any manner whatever; or unlawfully threatening or
+              unlawfully harassing including but not limited to {`&quot`}
+              indecent representation of women{`&quot`} within the meaning of
+              the Indecent Representation of Women (Prohibition) Act, 1986; and
             </li>
             <li>
               threatens the unity, integrity, defence, security, or sovereignty
@@ -1543,12 +1543,12 @@ const PrivacyPolicy = () => {
       <br />
 
       <p>
-        Information collected via Our server logs includes users' IP addresses
-        and the pages visited; this will be used to manage the web system and
-        troubleshoot problems. We also use third-party analytics, tracking,
-        optimization and targeting tools to understand how users engage with our
-        Website so that we can improve it and cater personalized content
-        according to their preferences.
+        Information collected via Our server logs includes user{`&apos`}s IP
+        addresses and the pages visited; this will be used to manage the web
+        system and troubleshoot problems. We also use third-party analytics,
+        tracking, optimization and targeting tools to understand how users
+        engage with our Website so that we can improve it and cater personalized
+        content according to their preferences.
       </p>
 
       <br />
@@ -1992,17 +1992,17 @@ const CookiePlociy = () => {
         Platform activity for us and providing other services relating to
         Platform activity and internet usage. Google may also transfer this
         information to third parties where required to do so by law, or where
-        such third parties process the information on Google's behalf. Google
-        will not associate your IP address with any other data held by Google.
-        By using this Platform, you consent to the processing of data about you
-        by Google in the manner and for the purposes set out above.
+        such third parties process the information on Google{`&apos`}s behalf.
+        Google will not associate your IP address with any other data held by
+        Google. By using this Platform, you consent to the processing of data
+        about you by Google in the manner and for the purposes set out above.
       </p>
 
       <br />
 
       <p>
         The Google Platform contains further information about Analytics and a
-        copy of Google's privacy policy pages.
+        copy of Google{`&apos`}s privacy policy pages.
       </p>
     </>
   );
@@ -2107,11 +2107,11 @@ const LegalDiscalimer = () => {
         The use of this Platform is at your sole discretion and risk. While
         LEONDEVS TECH (OPC) PRIVATE LIMITED makes every effort to maintain
         accurate and up-to-date information on the website, the Platform and all
-        its contents are provided on an {`&quot`}as is{`&quot`} and "as
-        available" basis without any warranties of any kind, whether express or
-        implied. The Company does not guarantee that the Platform will be
-        error-free, uninterrupted, secure, or free from viruses or other harmful
-        components.
+        its contents are provided on an {`&quot`}as is{`&quot`} and {`&quot`}as
+        available{`&quot`} basis without any warranties of any kind, whether
+        express or implied. The Company does not guarantee that the Platform
+        will be error-free, uninterrupted, secure, or free from viruses or other
+        harmful components.
       </p>
 
       <br />
