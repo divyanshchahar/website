@@ -534,14 +534,14 @@ const TermsOfUse = () => {
       <ol className={styles.insetList1}>
         <li>
           Users may upload content, including but not limited to images, videos,
-          audio files, and documents ("User Content"). While you retain all
-          ownership rights in your content, by submitting User Content, you
-          grant LEONDEVS TECH (OPC) PRIVATE LIMITED a non-exclusive,
-          royalty-free, worldwide, and sub-licensable license to use, reproduce,
-          display, and distribute the content for the sole purpose of providing
-          and improving the platform and its services. You are responsible for
-          ensuring that your content does not violate any applicable law or
-          infringe on third-party rights.
+          audio files, and documents ({`&quot`}User Content{`&quot`}). While you
+          retain all ownership rights in your content, by submitting User
+          Content, you grant LEONDEVS TECH (OPC) PRIVATE LIMITED a
+          non-exclusive, royalty-free, worldwide, and sub-licensable license to
+          use, reproduce, display, and distribute the content for the sole
+          purpose of providing and improving the platform and its services. You
+          are responsible for ensuring that your content does not violate any
+          applicable law or infringe on third-party rights.
         </li>
 
         <li>
@@ -608,7 +608,7 @@ const TermsOfUse = () => {
           <ol type="a" className={styles.insetList2}>
             <li>You have authority to share this business information</li>
 
-            <li>Data complies with India's DPDPA 2023</li>
+            <li>Data complies with India{`$apos`}s DPDPA 2023</li>
 
             <li>No third-party IP rights are violated</li>
           </ol>
@@ -625,15 +625,15 @@ const TermsOfUse = () => {
       <p>
         You agree to indemnify, defend and hold harmless the Company, and its
         respective directors, officers, employees, and agents (hereinafter
-        collectively referred to as "Parties"), from and against any losses,
-        liabilities, claims, damages, demands, costs, and expenses (including
-        legal fees and disbursements in connection therewith and interest
-        chargeable thereon) asserted against or incurred by us that arise out
-        of, result from, or maybe payable by, any breach or non-performance of
-        any representation, warranty, covenant, or agreement made or obligation
-        to be performed according to these Terms of Use. Further, you agree to
-        hold the Company harmless against any claims made by any Third Party due
-        to/ or arising out of, or in connection with:
+        collectively referred to as {`&quot`}Parties{`&quot`}), from and against
+        any losses, liabilities, claims, damages, demands, costs, and expenses
+        (including legal fees and disbursements in connection therewith and
+        interest chargeable thereon) asserted against or incurred by us that
+        arise out of, result from, or maybe payable by, any breach or
+        non-performance of any representation, warranty, covenant, or agreement
+        made or obligation to be performed according to these Terms of Use.
+        Further, you agree to hold the Company harmless against any claims made
+        by any Third Party due to/ or arising out of, or in connection with:
       </p>
 
       <ol type="1" className={styles.insetList1}>
@@ -996,9 +996,9 @@ const TermsOfUse = () => {
         </li>
         <li>
           commit any act that causes the Company to lose (in whole or in part)
-          the Services of its Internet Establishment ("ISP") or in any manner
-          disrupts the Services of any other supplier/service provider of the
-          Platform;
+          the Services of its Internet Establishment ({`&quot`}ISP{`&quot`}) or
+          in any manner disrupts the Services of any other supplier/service
+          provider of the Platform;
         </li>
         <li>
           you hereby expressly authorize the Company to disclose any and all
@@ -1067,9 +1067,9 @@ const TermsOfUse = () => {
               racially, ethnically objectionable, disparaging, relating or
               encouraging money laundering or gambling, or otherwise unlawful in
               any manner whatever; or unlawfully threatening or unlawfully
-              harassing including but not limited to "indecent representation of
-              women" within the meaning of the Indecent Representation of Women
-              (Prohibition) Act, 1986; and
+              harassing including but not limited to {`&quot`}indecent
+              representation of women{`&quot`} within the meaning of the
+              Indecent Representation of Women (Prohibition) Act, 1986; and
             </li>
             <li>
               threatens the unity, integrity, defence, security, or sovereignty
@@ -1902,6 +1902,275 @@ const PrivacyPolicy = () => {
   );
 };
 
+const CookiePlociy = () => {
+  return (
+    <>
+      <h1 className="h4">COOKIE POLICY</h1>
+
+      <br />
+
+      {/* COOKKIES */}
+      <h2 className="h5">COOKIES</h2>
+
+      <br />
+
+      <p>
+        A cookie is a small file of letters and numbers that we store on your
+        browser or the hard drive of your computer if you agree. By continuing
+        to browse the site, you are agreeing to our use of cookies. Cookies
+        contain information that is transferred to your computer’s hard drive.
+        You can set your browser to refuse all or some browser cookies, or to
+        alert you when Platforms set or access cookies. If you disable or refuse
+        cookies, please note that some parts of this Platform may become
+        inaccessible or not function properly. A list of the type of cookies we
+        use is as follows;
+      </p>
+
+      <ol className={styles.insetList1} type="1">
+        <li>
+          <span className={styles.bold}>Strictly necessary cookies.</span>{" "}
+           These are cookies that are required for the operation of our
+          Platform. They include, for example, cookies that enable you to log
+          into secure areas of our Platform, use a shopping cart or make use of
+          e-billing services.
+        </li>
+
+        <li>
+          <span className={styles.bold}>Analytical/performance cookies.</span>
+           They allow us to recognize and count the number of visitors and to
+          see how visitors move around our Platform when they are using it. This
+          helps us to improve the way our Platform works, for example, by
+          ensuring that users are finding what they are looking for easily.
+        </li>
+
+        <li>
+          <span className={styles.bold}>Functionality cookies.</span>
+           These are used to recognize you when you return to our Platform. This
+          enables us to personalize our content for you, greet you by name and
+          remember your preferences (for example, your choice of language or
+          region).
+        </li>
+      </ol>
+
+      <br />
+
+      <p>
+        Please note that third-parties (including, for example, advertising
+        networks and providers of external services like web traffic analysis
+        services) may also use cookies, over which we have no control. These
+        cookies are likely to be analytical/performance cookies or targeting
+        cookies. You can block cookies by activating the setting on your browser
+        that allows you to refuse the setting of all or some cookies. However,
+        if you use your browser settings to block all cookies (including
+        essential cookies) you may not be able to access all or parts of our
+        Platform.
+      </p>
+
+      <br />
+
+      {/* GOOGLE ANALYTICS */}
+      <h2 className="h5">GOOGLE ANALYTICS</h2>
+
+      <br />
+
+      <p>
+        We use Google Analytics to help us to understand how you make use of our
+        content and work out how we can make things better. These cookies follow
+        your progress through us, collecting anonymous data on where you have
+        come from, which pages you visit, and how long you spend on the site.
+        This data is then stored by Google to create reports. These cookies do
+        not store your personal data.
+      </p>
+
+      <br />
+
+      <p>
+        The information generated by the cookie about your use of the Platform,
+        including your IP address, may be transmitted to and stored by Google on
+        servers in the United States. Google may use this information for the
+        purpose of evaluating your use of the Platform, compiling reports on
+        Platform activity for us and providing other services relating to
+        Platform activity and internet usage. Google may also transfer this
+        information to third parties where required to do so by law, or where
+        such third parties process the information on Google's behalf. Google
+        will not associate your IP address with any other data held by Google.
+        By using this Platform, you consent to the processing of data about you
+        by Google in the manner and for the purposes set out above.
+      </p>
+
+      <br />
+
+      <p>
+        The Google Platform contains further information about Analytics and a
+        copy of Google's privacy policy pages.
+      </p>
+    </>
+  );
+};
+
+const LegalDiscalimer = () => {
+  return (
+    <>
+      <h1 className="h4">LEGAL DISCLAIMER</h1>
+
+      <br />
+
+      <p>
+        This website and its contents are owned and is operating under the name
+        M/s. Leondevs Tech (OPC) Private Limited., a company incorporated under
+        the Companies Act, 2013.
+      </p>
+
+      <br />
+
+      <p>
+        All content made available on this Platform, including but not limited
+        to service descriptions, technical references, case studies, and company
+        information, is for informational purposes only and shall not be
+        construed as a legally binding offer, advice, or representation.
+        LEONDEVS TECH (OPC) PRIVATE LIMITED makes no warranties, express or
+        implied, regarding the legal validity, enforceability, or commercial
+        outcomes of any information displayed on the Platform.
+      </p>
+
+      <br />
+
+      <p>
+        Accessing or using this Platform does not establish any client, agency,
+        employment, or partnership relationship between you and the Company. Any
+        formal engagement or transaction between you and LEONDEVS TECH (OPC)
+        PRIVATE LIMITED must be governed exclusively by a duly executed written
+        agreement. In the absence of such an agreement, no rights, obligations,
+        or liabilities shall arise on the part of the Company.
+      </p>
+
+      <br />
+
+      <p>
+        The Company expressly disclaims liability for any actions taken based on
+        the content of this Platform without independent verification or legal
+        consultation.
+      </p>
+
+      <br />
+
+      <p className={styles.bold}>
+        By using this website, you acknowledge that you have read, understood,
+        and agree to this disclaimer.
+      </p>
+
+      <br />
+
+      {/* GENERAL DISCLAIMER  */}
+      <h2 className="h5">GENERAL DISCLAIMER</h2>
+
+      <br />
+
+      <p>
+        The information provided on this Platform is intended solely for general
+        informational purposes and does not constitute any form of professional
+        advice, guarantee, or representation. LEONDEVS TECH (OPC) PRIVATE
+        LIMITED makes reasonable efforts to ensure that the content presented on
+        the Platform is accurate and up to date; however, the Company makes no
+        warranties or representations, express or implied, regarding the
+        completeness, reliability, or suitability of the information for any
+        particular purpose.
+      </p>
+
+      <br />
+
+      <p>
+        The Platform does not function as a transactional or service delivery
+        tool. Any engagement with the Company, including service terms,
+        timelines, pricing, or deliverables, is formalized only through offline
+        contractual agreements. Users are advised not to rely solely on the
+        Platform for making business decisions or entering into any commitments.
+      </p>
+
+      <br />
+
+      <p>
+        LEONDEVS TECH (OPC) PRIVATE LIMITED disclaims all liability for any
+        direct, indirect, incidental, or consequential loss or damage arising
+        from the use of, or reliance on, any information provided through this
+        Platform.
+      </p>
+
+      <br />
+
+      {/* RISK DICLAIMER */}
+      <h2 className="h5">RISK DISCLAIMER</h2>
+
+      <br />
+
+      <p>
+        The use of this Platform is at your sole discretion and risk. While
+        LEONDEVS TECH (OPC) PRIVATE LIMITED makes every effort to maintain
+        accurate and up-to-date information on the website, the Platform and all
+        its contents are provided on an {`&quot`}as is{`&quot`} and "as
+        available" basis without any warranties of any kind, whether express or
+        implied. The Company does not guarantee that the Platform will be
+        error-free, uninterrupted, secure, or free from viruses or other harmful
+        components.
+      </p>
+
+      <br />
+
+      <p>
+        LEONDEVS TECH (OPC) PRIVATE LIMITED expressly disclaims any liability
+        arising out of your reliance on the information presented on the
+        Platform, including but not limited to project showcases, service
+        descriptions, or contact channels. The Platform does not deliver
+        services, process payments, or offer transactional capabilities. All
+        service engagements are handled separately through formal contracts, and
+        no part of the Platform constitutes a binding offer or guarantee of
+        services.
+      </p>
+
+      <br />
+
+      <p>
+        You acknowledge and accept that any business decisions or engagements
+        initiated through the Platform are subject to independent evaluation and
+        due diligence, and the Company shall not be held liable for any loss,
+        disruption, or damages resulting from your use of or reliance on the
+        Platform or its associated content.
+      </p>
+
+      <br />
+
+      {/* PERSONEL RESPONSIBILITY DISCALIMER */}
+      <h2 className="h5">PERSONEL RESPONSIBILIY DISCLAIMER</h2>
+
+      <br />
+
+      <p>
+        By using this Platform, you acknowledge that any actions taken based on
+        the content, communications, or services referenced herein are done at
+        your own discretion and risk. While LEONDEVS TECH (OPC) PRIVATE LIMITED
+        provides information about its services, including frontend, backend,
+        and e-commerce solutions, it is your sole responsibility to evaluate the
+        relevance, accuracy, and applicability of such information before making
+        any decisions or entering into any engagement.
+      </p>
+
+      <br />
+
+      <p>
+        You agree that you are personally responsible for verifying the
+        legitimacy of any inquiry, communication, or opportunity presented
+        through the Platform. LEONDEVS TECH (OPC) PRIVATE LIMITED shall not be
+        liable for any consequences resulting from your personal decisions,
+        reliance on website content, or failure to independently assess the
+        scope of services, technical requirements, or terms of engagement. It is
+        your duty to exercise appropriate judgment and seek further
+        clarification where required before acting on any information found on
+        or through the Platform.
+      </p>
+    </>
+  );
+};
+
 function legal() {
   return (
     <div className={styles.pageContainer}>
@@ -1912,6 +2181,18 @@ function legal() {
       <br />
 
       <PrivacyPolicy />
+
+      <br />
+      <hr className={styles.sepration} />
+      <br />
+
+      <CookiePlociy />
+
+      <br />
+      <hr className={styles.sepration} />
+      <br />
+
+      <LegalDiscalimer />
     </div>
   );
 }
