@@ -1390,6 +1390,7 @@ const PrivacyPolicy = () => {
       <br />
 
       <hr />
+      <br />
 
       <p className={styles.bold}>
         This Privacy Policy shall be in compliance with the General Data
@@ -1402,6 +1403,7 @@ const PrivacyPolicy = () => {
         Privacy Policy, you should contact our Customer Care.
       </p>
 
+      <br />
       <hr />
 
       <br />
