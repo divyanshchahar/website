@@ -21,7 +21,7 @@ function PostBookingLayout() {
           <p className="h5">2. Scoping meeting</p>
           <p>
             Our team will work with you to outline your project goals and
-            clarify any the scope.
+            clarify the scope.
           </p>
         </div>
 

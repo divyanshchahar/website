@@ -42,7 +42,7 @@ const serviceSectionProps = [
     descriptionText: (
       <p>
         At Leondevs we believe in making frontend/client apps with focus on
-        functionality, simplicity and consistent styling. JavaScript is our
+        functionality, simplicity and consistent styling. TypeScript is our
         language of choice for all frontend/client applications. Depending on
         the requirements the frontend/client application will be built with
         either React.js or with Next.js.
@@ -57,9 +57,9 @@ const serviceSectionProps = [
     titleText: "Backend Solution",
     descriptionText: (
       <p>
-        At leondevs we offer complete Backend/Server side solutions for our
+        At Leondevs we offer complete Backend/Server side solutions for our
         clients ranging from simple API servers to implementation of complex
-        business logic. Our language of choice is JavaScript which makes node.js
+        business logic. Our language of choice is TypeScript which makes node.js
         our defacto runtime. We build our backends in express.js.
       </p>
     ),

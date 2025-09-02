@@ -21,7 +21,7 @@ function SdlcLayout() {
         <p className="h5">Scoping</p>
 
         <ul>
-          <li>Convert business goals into technical goals</li>
+          <li>Convert business goals into technical roadmap</li>
         </ul>
 
         <br />

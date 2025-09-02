@@ -63,7 +63,7 @@ const ourValuesProps = [
     itemValue: "value 5",
     contentBody: (
       <p>
-        Our experiance gives us perspective, nad we understand that its the
+        Our experiance gives us perspective, and we understand that its the
         journey not the destination. We are confident in our capabilities and
         maintian positivity during tough times
       </p>
@@ -103,9 +103,9 @@ const DirectorsInfo = () => {
           <br />
 
           <p>
-            I am a creative person, not the kind of person who would create the
+            I am a creative person,not the kind of creative who would create the
             next Mona Lisa, I create solutions with technology. Writing code is
-            a creative outlet for me. I enjoy creating new things.
+            a creative outlet for me. I enjoy making new things.
           </p>
 
           <br />

@@ -30,10 +30,11 @@ function AccordionPrimitive({ items }: AccordianPrimitiveProps) {
           className={`${styles.item}`}
         >
           <Accordion.Header className={headerClass(index, items.length)}>
-            <Accordion.Trigger className={styles.trigger}>
+            <Accordion.Trigger className="h6">
               {item.triggerText}
             </Accordion.Trigger>
           </Accordion.Header>
+
           <Accordion.Content className={`${styles.content}`}>
             {item.contentBody}
           </Accordion.Content>
